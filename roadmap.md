@@ -1,4 +1,5 @@
 # Roadmap
+- [x] NEMPO 05: Navy Elegan Foto, desain tersendiri, acara, cerita, galeri, RSVP, dan kado pratinjau.
 - [x] NEMPO 04: undangan Peach Klasik Tanpa Foto dengan ilustrasi taman bergerak, acara, cerita, RSVP, dan kado contoh.
 - [x] NEMPO 03: desain Peach Klasik Foto, galeri, acara, cerita, dan RSVP pratinjau.
 - [x] Tambah musik latar dan kartu hadiah rekening/QRIS contoh di NEMPO 01; data pembayaran asli menunggu pengguna.

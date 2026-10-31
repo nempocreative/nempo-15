@@ -6,6 +6,35 @@
 @custom-variant dark (&:is(.dark *));
 
 /* NEMPO 04 — scoped vintage garden palette */
+.nempo-one.nempo-five {
+  --n05-paper: oklch(0.98 0.004 250);
+  --n05-navy: oklch(0.29 0.065 265);
+  --n05-gold: oklch(0.72 0.09 85);
+  --n05-line: oklch(0.84 0.017 255);
+  --n05-soft: oklch(0.94 0.012 250);
+  --n05-on-dark: oklch(0.98 0.005 90);
+  --n05-muted: oklch(0.49 0.025 260);
+  --n05-shade: linear-gradient(180deg, color-mix(in oklab, var(--n05-navy) 25%, transparent), transparent 40%, color-mix(in oklab, var(--n05-navy) 85%, transparent));
+  --n05-shadow: 0 8px 30px color-mix(in oklab, var(--n05-navy) 12%, transparent);
+  --background: var(--n05-paper);
+  --foreground: var(--n05-navy);
+  --primary: var(--n05-navy);
+  --primary-foreground: var(--n05-on-dark);
+  --primary-border: var(--n05-navy);
+  --border: var(--n05-line);
+  --inv-soft: var(--n05-soft);
+  --color-background: var(--n05-paper);
+  --color-foreground: var(--n05-navy);
+  --color-primary: var(--n05-navy);
+  --color-primary-foreground: var(--n05-on-dark);
+  --color-border: var(--n05-line);
+  --color-input: var(--n05-line);
+  --color-ring: var(--n05-gold);
+  --color-muted: var(--n05-soft);
+  --color-muted-foreground: var(--n05-muted);
+  --color-accent: var(--n05-soft);
+  --color-accent-foreground: var(--n05-navy);
+}
 .nempo-four {
   --n04-paper: #fff9f6;
   --n04-peach: #f4d7ce;
