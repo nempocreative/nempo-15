@@ -31,6 +31,7 @@ import { Route as NempoMouIndexRouteImport } from './routes/nempo-mou.index'
 import { Route as NempoMouSplatRouteImport } from './routes/nempo-mou.$'
 import { Route as TionFeedIndexRouteImport } from './routes/tion-feed.index'
 import { Route as TionFeedSplatRouteImport } from './routes/tion-feed.$'
+import { Route as WeddingInvitationTemaPeachKlasikTanpaFotoRouteImport } from './routes/wedding-invitation.tema.peach-klasik-tanpa-foto'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -142,6 +143,12 @@ const TionFeedSplatRoute = TionFeedSplatRouteImport.update({
   path: '/tion-feed/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WeddingInvitationTemaPeachKlasikTanpaFotoRoute =
+  WeddingInvitationTemaPeachKlasikTanpaFotoRouteImport.update({
+    id: '/tema/peach-klasik-tanpa-foto',
+    path: '/tema/peach-klasik-tanpa-foto',
+    getParentRoute: () => WeddingInvitationRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -152,7 +159,7 @@ export interface FileRoutesByFullPath {
   '/sosmed-management': typeof SosmedManagementRoute
   '/talent': typeof TalentRoute
   '/web-development': typeof WebDevelopmentRoute
-  '/wedding-invitation': typeof WeddingInvitationRoute
+  '/wedding-invitation': typeof WeddingInvitationRouteWithChildren
   '/wedding-organizer': typeof WeddingOrganizerRoute
   '/admin-panel/$': typeof AdminPanelSplatRoute
   '/api/$': typeof ApiSplatRoute
@@ -166,6 +173,7 @@ export interface FileRoutesByFullPath {
   '/nempo-feed/': typeof NempoFeedIndexRoute
   '/nempo-mou/': typeof NempoMouIndexRoute
   '/tion-feed/': typeof TionFeedIndexRoute
+  '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -176,7 +184,7 @@ export interface FileRoutesByTo {
   '/sosmed-management': typeof SosmedManagementRoute
   '/talent': typeof TalentRoute
   '/web-development': typeof WebDevelopmentRoute
-  '/wedding-invitation': typeof WeddingInvitationRoute
+  '/wedding-invitation': typeof WeddingInvitationRouteWithChildren
   '/wedding-organizer': typeof WeddingOrganizerRoute
   '/admin-panel/$': typeof AdminPanelSplatRoute
   '/api/$': typeof ApiSplatRoute
@@ -190,6 +198,7 @@ export interface FileRoutesByTo {
   '/nempo-feed': typeof NempoFeedIndexRoute
   '/nempo-mou': typeof NempoMouIndexRoute
   '/tion-feed': typeof TionFeedIndexRoute
+  '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -201,7 +210,7 @@ export interface FileRoutesById {
   '/sosmed-management': typeof SosmedManagementRoute
   '/talent': typeof TalentRoute
   '/web-development': typeof WebDevelopmentRoute
-  '/wedding-invitation': typeof WeddingInvitationRoute
+  '/wedding-invitation': typeof WeddingInvitationRouteWithChildren
   '/wedding-organizer': typeof WeddingOrganizerRoute
   '/admin-panel/$': typeof AdminPanelSplatRoute
   '/api/$': typeof ApiSplatRoute
@@ -215,6 +224,7 @@ export interface FileRoutesById {
   '/nempo-feed/': typeof NempoFeedIndexRoute
   '/nempo-mou/': typeof NempoMouIndexRoute
   '/tion-feed/': typeof TionFeedIndexRoute
+  '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -241,6 +251,7 @@ export interface FileRouteTypes {
     | '/nempo-feed/'
     | '/nempo-mou/'
     | '/tion-feed/'
+    | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -265,6 +276,7 @@ export interface FileRouteTypes {
     | '/nempo-feed'
     | '/nempo-mou'
     | '/tion-feed'
+    | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
   id:
     | '__root__'
     | '/'
@@ -289,6 +301,7 @@ export interface FileRouteTypes {
     | '/nempo-feed/'
     | '/nempo-mou/'
     | '/tion-feed/'
+    | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -300,7 +313,7 @@ export interface RootRouteChildren {
   SosmedManagementRoute: typeof SosmedManagementRoute
   TalentRoute: typeof TalentRoute
   WebDevelopmentRoute: typeof WebDevelopmentRoute
-  WeddingInvitationRoute: typeof WeddingInvitationRoute
+  WeddingInvitationRoute: typeof WeddingInvitationRouteWithChildren
   WeddingOrganizerRoute: typeof WeddingOrganizerRoute
   AdminPanelSplatRoute: typeof AdminPanelSplatRoute
   ApiSplatRoute: typeof ApiSplatRoute
@@ -472,8 +485,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TionFeedSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/wedding-invitation/tema/peach-klasik-tanpa-foto': {
+      id: '/wedding-invitation/tema/peach-klasik-tanpa-foto'
+      path: '/tema/peach-klasik-tanpa-foto'
+      fullPath: '/wedding-invitation/tema/peach-klasik-tanpa-foto'
+      preLoaderRoute: typeof WeddingInvitationTemaPeachKlasikTanpaFotoRouteImport
+      parentRoute: typeof WeddingInvitationRoute
+    }
   }
 }
+
+interface WeddingInvitationRouteChildren {
+  WeddingInvitationTemaPeachKlasikTanpaFotoRoute: typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
+}
+
+const WeddingInvitationRouteChildren: WeddingInvitationRouteChildren = {
+  WeddingInvitationTemaPeachKlasikTanpaFotoRoute:
+    WeddingInvitationTemaPeachKlasikTanpaFotoRoute,
+}
+
+const WeddingInvitationRouteWithChildren =
+  WeddingInvitationRoute._addFileChildren(WeddingInvitationRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -484,7 +516,7 @@ const rootRouteChildren: RootRouteChildren = {
   SosmedManagementRoute: SosmedManagementRoute,
   TalentRoute: TalentRoute,
   WebDevelopmentRoute: WebDevelopmentRoute,
-  WeddingInvitationRoute: WeddingInvitationRoute,
+  WeddingInvitationRoute: WeddingInvitationRouteWithChildren,
   WeddingOrganizerRoute: WeddingOrganizerRoute,
   AdminPanelSplatRoute: AdminPanelSplatRoute,
   ApiSplatRoute: ApiSplatRoute,
