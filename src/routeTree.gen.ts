@@ -32,6 +32,7 @@ import { Route as NempoMouSplatRouteImport } from './routes/nempo-mou.$'
 import { Route as TionFeedIndexRouteImport } from './routes/tion-feed.index'
 import { Route as TionFeedSplatRouteImport } from './routes/tion-feed.$'
 import { Route as WeddingInvitationTemaMoccaHangatRouteImport } from './routes/wedding-invitation.tema.mocca-hangat'
+import { Route as WeddingInvitationTemaMoccaHangatTanpaFotoRouteImport } from './routes/wedding-invitation.tema.mocca-hangat-tanpa-foto'
 import { Route as WeddingInvitationTemaNavyEleganRouteImport } from './routes/wedding-invitation.tema.navy-elegan'
 import { Route as WeddingInvitationTemaNavyEleganTanpaFotoRouteImport } from './routes/wedding-invitation.tema.navy-elegan-tanpa-foto'
 import { Route as WeddingInvitationTemaPeachKlasikTanpaFotoRouteImport } from './routes/wedding-invitation.tema.peach-klasik-tanpa-foto'
@@ -152,6 +153,12 @@ const WeddingInvitationTemaMoccaHangatRoute =
     path: '/tema/mocca-hangat',
     getParentRoute: () => WeddingInvitationRoute,
   } as any)
+const WeddingInvitationTemaMoccaHangatTanpaFotoRoute =
+  WeddingInvitationTemaMoccaHangatTanpaFotoRouteImport.update({
+    id: '/tema/mocca-hangat-tanpa-foto',
+    path: '/tema/mocca-hangat-tanpa-foto',
+    getParentRoute: () => WeddingInvitationRoute,
+  } as any)
 const WeddingInvitationTemaNavyEleganRoute =
   WeddingInvitationTemaNavyEleganRouteImport.update({
     id: '/tema/navy-elegan',
@@ -195,6 +202,7 @@ export interface FileRoutesByFullPath {
   '/nempo-mou/': typeof NempoMouIndexRoute
   '/tion-feed/': typeof TionFeedIndexRoute
   '/wedding-invitation/tema/mocca-hangat': typeof WeddingInvitationTemaMoccaHangatRoute
+  '/wedding-invitation/tema/mocca-hangat-tanpa-foto': typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
   '/wedding-invitation/tema/navy-elegan-tanpa-foto': typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
@@ -223,6 +231,7 @@ export interface FileRoutesByTo {
   '/nempo-mou': typeof NempoMouIndexRoute
   '/tion-feed': typeof TionFeedIndexRoute
   '/wedding-invitation/tema/mocca-hangat': typeof WeddingInvitationTemaMoccaHangatRoute
+  '/wedding-invitation/tema/mocca-hangat-tanpa-foto': typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
   '/wedding-invitation/tema/navy-elegan-tanpa-foto': typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
@@ -252,6 +261,7 @@ export interface FileRoutesById {
   '/nempo-mou/': typeof NempoMouIndexRoute
   '/tion-feed/': typeof TionFeedIndexRoute
   '/wedding-invitation/tema/mocca-hangat': typeof WeddingInvitationTemaMoccaHangatRoute
+  '/wedding-invitation/tema/mocca-hangat-tanpa-foto': typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
   '/wedding-invitation/tema/navy-elegan-tanpa-foto': typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
@@ -282,6 +292,7 @@ export interface FileRouteTypes {
     | '/nempo-mou/'
     | '/tion-feed/'
     | '/wedding-invitation/tema/mocca-hangat'
+    | '/wedding-invitation/tema/mocca-hangat-tanpa-foto'
     | '/wedding-invitation/tema/navy-elegan'
     | '/wedding-invitation/tema/navy-elegan-tanpa-foto'
     | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
@@ -310,6 +321,7 @@ export interface FileRouteTypes {
     | '/nempo-mou'
     | '/tion-feed'
     | '/wedding-invitation/tema/mocca-hangat'
+    | '/wedding-invitation/tema/mocca-hangat-tanpa-foto'
     | '/wedding-invitation/tema/navy-elegan'
     | '/wedding-invitation/tema/navy-elegan-tanpa-foto'
     | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
@@ -338,6 +350,7 @@ export interface FileRouteTypes {
     | '/nempo-mou/'
     | '/tion-feed/'
     | '/wedding-invitation/tema/mocca-hangat'
+    | '/wedding-invitation/tema/mocca-hangat-tanpa-foto'
     | '/wedding-invitation/tema/navy-elegan'
     | '/wedding-invitation/tema/navy-elegan-tanpa-foto'
     | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
@@ -531,6 +544,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WeddingInvitationTemaMoccaHangatRouteImport
       parentRoute: typeof WeddingInvitationRoute
     }
+    '/wedding-invitation/tema/mocca-hangat-tanpa-foto': {
+      id: '/wedding-invitation/tema/mocca-hangat-tanpa-foto'
+      path: '/tema/mocca-hangat-tanpa-foto'
+      fullPath: '/wedding-invitation/tema/mocca-hangat-tanpa-foto'
+      preLoaderRoute: typeof WeddingInvitationTemaMoccaHangatTanpaFotoRouteImport
+      parentRoute: typeof WeddingInvitationRoute
+    }
     '/wedding-invitation/tema/navy-elegan': {
       id: '/wedding-invitation/tema/navy-elegan'
       path: '/tema/navy-elegan'
@@ -557,6 +577,7 @@ declare module '@tanstack/react-router' {
 
 interface WeddingInvitationRouteChildren {
   WeddingInvitationTemaMoccaHangatRoute: typeof WeddingInvitationTemaMoccaHangatRoute
+  WeddingInvitationTemaMoccaHangatTanpaFotoRoute: typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   WeddingInvitationTemaNavyEleganRoute: typeof WeddingInvitationTemaNavyEleganRoute
   WeddingInvitationTemaNavyEleganTanpaFotoRoute: typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   WeddingInvitationTemaPeachKlasikTanpaFotoRoute: typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
@@ -564,6 +585,8 @@ interface WeddingInvitationRouteChildren {
 
 const WeddingInvitationRouteChildren: WeddingInvitationRouteChildren = {
   WeddingInvitationTemaMoccaHangatRoute: WeddingInvitationTemaMoccaHangatRoute,
+  WeddingInvitationTemaMoccaHangatTanpaFotoRoute:
+    WeddingInvitationTemaMoccaHangatTanpaFotoRoute,
   WeddingInvitationTemaNavyEleganRoute: WeddingInvitationTemaNavyEleganRoute,
   WeddingInvitationTemaNavyEleganTanpaFotoRoute:
     WeddingInvitationTemaNavyEleganTanpaFotoRoute,
