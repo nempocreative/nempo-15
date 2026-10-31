@@ -17,6 +17,7 @@
 - [x] Manekin busana berleher tertutup dengan knop kuningan seperti referensi, tanpa wajah; ujung baju tidak diubah.
 - [x] Tambah pilihan inspirasi dekor pelaminan, kebaya, tone warna, dan konsep acara di Wedding Organizer, dengan rangkuman konsultasi WhatsApp.
 - [x] Migrate nempo-5 code into this project
+- [x] Migrate nempo-10 code + 18 tables into this project
 - [x] Recreate 18 database tables in Lovable Cloud
 - [ ] Import existing data — waiting for backup JSON from old app's /backup page
 - [x] Check remix-of-nempo-5 (older copy of nempo-5; nempo-5 used as source)
