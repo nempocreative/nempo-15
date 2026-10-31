@@ -2,6 +2,11 @@ import { describe, expect, it } from "vitest";
 import { invitationCategories, invitationThemes, filterInvitationThemes, findInvitationTheme } from "./invitation-themes";
 
 describe("invitation categories", () => {
+  it("keeps NEMPO 09 as the Hitam Mewah luxury photo invitation", () => {
+    expect(findInvitationTheme("hitam-mewah")).toMatchObject({
+      code: "NEMPO 09", category: "luxury-photo", withPhoto: true,
+    });
+  });
   it("keeps NEMPO 08 as the Mocca Hangat no-photo vintage invitation", () => {
     expect(findInvitationTheme("mocca-hangat-tanpa-foto")).toMatchObject({
       code: "NEMPO 08", category: "vintage-no-photo", withPhoto: false,
