@@ -1,4 +1,5 @@
 # Roadmap
+- [ ] NEMPO 08: Mocca Hangat Tanpa Foto dengan cartoon beranimasi, acara, cerita, RSVP, kado dan kalender pratinjau.
 - [x] NEMPO 07: Mocca Hangat Foto, desain botanical vintage, acara, cerita, galeri, RSVP, dan kado pratinjau; kartu tema, kalender, ucapan, dan tampilan ponsel/komputer diperiksa.
 - [x] Periksa migration remix terbaru: migration salinan sudah kosong, jurnal tanpa entri, database tidak diubah.
 - [x] NEMPO 06: Navy Elegan Tanpa Foto dengan cartoon pengantin beranimasi, acara, cerita, RSVP, dan kado contoh.
