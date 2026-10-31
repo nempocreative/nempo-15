@@ -77,7 +77,6 @@ export function Nempo02Invitation() {
 
   return <div className="nempo-one nempo-two relative min-h-screen overflow-x-hidden">
     <audio ref={audioRef} src={musicAsset.url} loop preload="none" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}/>
-    {stage === "open" && <audio ref={audioRef} src={musicAsset.url}/>}
     <div className="n01-petals" aria-hidden="true">{Array.from({ length: 8 }, (_, i) => <span key={i} className={`n01-petal n01-petal-${i}`}><Flower2 strokeWidth={1}/></span>)}</div>
 
     {stage !== "open" ? <section className={`n02-cover relative flex min-h-svh items-center justify-center overflow-hidden px-6 py-16 text-center ${stage === "opening" ? "n02-opening" : "n01-enter"}`}>
