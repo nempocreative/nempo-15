@@ -5,6 +5,28 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* NEMPO 04 — scoped vintage garden palette */
+.nempo-four {
+  --n04-paper: #fff9f6;
+  --n04-peach: #f4d7ce;
+  --n04-ink: #38483d;
+  --n04-sage: #526852;
+  --n04-rose: #995a59;
+  --n04-line: #d5c2b7;
+  --n04-white: #ffffff;
+  --n04-shadow: 0 8px 28px -16px #38483d;
+  --background: 20 100% 98%;
+  --foreground: 139 13% 25%;
+  --primary: 120 12% 36%;
+  --primary-foreground: 0 0% 100%;
+  --primary-border: var(--n04-sage);
+  --border: 23 26% 78%;
+  --input: 23 26% 78%;
+  --ring: 120 12% 36%;
+  --muted-foreground: 120 8% 40%;
+  --inv-soft: var(--n04-peach);
+}
+
 /* ── PAYMENT MARQUEE ── */
 @keyframes payment-marquee {
   0%   { transform: translateX(0); }

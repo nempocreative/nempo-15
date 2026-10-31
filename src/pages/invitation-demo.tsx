@@ -6,6 +6,7 @@ import { NEMPO_CONSULT_URL } from "@/lib/contact";
 import { Nempo01Invitation } from "@/components/nempo-01-invitation";
 import { Nempo02Invitation } from "@/components/nempo-02-invitation";
 import { Nempo03Invitation } from "@/components/nempo-03-invitation";
+import { Nempo04Invitation } from "@/components/nempo-04-invitation";
 
 const serif = "font-[family-name:var(--font-wed-serif)]";
 const hand = "font-[family-name:var(--font-wed-hand)]";
@@ -40,12 +41,13 @@ export default function InvitationDemoPage() {
   const [open, setOpen] = useState(false);
   const cd = useCountdown(new Date("2026-12-20T09:00:00+07:00").getTime());
 
-  useEffect(() => { document.body.style.overflow = open || (theme?.code === "NEMPO 01" || theme?.code === "NEMPO 02") ? "" : "hidden"; return () => { document.body.style.overflow = ""; }; }, [open, theme?.code]);
+  useEffect(() => { document.body.style.overflow = open || ["NEMPO 01", "NEMPO 02", "NEMPO 03", "NEMPO 04"].includes(theme?.code ?? "") ? "" : "hidden"; return () => { document.body.style.overflow = ""; }; }, [open, theme?.code]);
 
   if (!theme) return null;
   if (theme.code === "NEMPO 01") return <Nempo01Invitation />;
   if (theme.code === "NEMPO 02") return <Nempo02Invitation />;
   if (theme.code === "NEMPO 03") return <Nempo03Invitation />;
+  if (theme.code === "NEMPO 04") return <Nempo04Invitation />;
   const c = theme.colors;
 
   return (
