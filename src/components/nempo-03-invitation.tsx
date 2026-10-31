@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, BookHeart, CalendarHeart, CalendarPlus, Flower2, Heart, Images, Leaf, MailOpen, MapPin, MessageCircle, Send, Volume2, VolumeX, X } from "lucide-react";
+import { ArrowLeft, BookHeart, CalendarHeart, CalendarPlus, Flower2, Heart, Images, Leaf, MailOpen, MapPin, MessageCircle, Send, Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogClose, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Link } from "@/lib/wouter";
 import { NEMPO_WA_URL } from "@/lib/contact";
 import { Nempo01Guestbook } from "./nempo-01-guestbook";
@@ -81,7 +81,7 @@ export function Nempo03Invitation() {
       <footer className="n01-soft px-6 pb-28 pt-10 text-center"><p className="n01-label n01-blue">NEMPO 03 · Peach Klasik</p><Button asChild className="n01-body mt-5 rounded-sm text-xs"><a href={consult} target="_blank" rel="noopener noreferrer"><Send/> Pesan tema ini</a></Button><p className="n01-body mt-5 text-[10px] leading-5 opacity-70">Nama, tanggal, cerita, lokasi, dan hadiah merupakan contoh.<br/>Foto pasangan dibuat dengan AI untuk pratinjau.<br/>Nempo Garut Organizer</p></footer>
     </main><nav className="n03-nav" aria-label="Bagian undangan">{[{ id: "mempelai", label: "Mempelai", Icon: Heart }, { id: "acara", label: "Acara", Icon: CalendarHeart }, { id: "cerita", label: "Cerita", Icon: BookHeart }, { id: "galeri", label: "Galeri", Icon: Images }, { id: "rsvp", label: "RSVP", Icon: MessageCircle }].map(({ id, label, Icon }) => <a key={id} href={`#${id}`}><Icon className="size-4"/>{label}</a>)}<Button variant="ghost" title={musicUnavailable ? "Musik contoh belum tersedia" : "Musik"} aria-label={playing ? "Matikan musik" : "Putar musik"} onClick={toggleMusic}>{playing ? <Volume2 className="size-4"/> : <VolumeX className="size-4"/>}Musik</Button></nav>
     {musicUnavailable && <p role="status" className="n01-body n01-soft fixed bottom-20 left-1/2 z-40 -translate-x-1/2 rounded-sm border px-4 py-3 text-xs">Musik contoh belum tersedia.</p>}
-    <Dialog open={selectedPhoto !== null} onOpenChange={(value) => { if (!value) setSelectedPhoto(null); }}><DialogContent className="n03-lightbox border-0 rounded-none" showCloseButton={false}><DialogTitle className="sr-only">Foto pasangan</DialogTitle><DialogClose asChild><Button variant="ghost" size="icon" aria-label="Tutup foto" className="absolute right-4 top-4"><X/></Button></DialogClose>{selectedPhoto && <img src={selectedPhoto} alt="Foto contoh pasangan diperbesar"/>}</DialogContent></Dialog>
+    <Dialog open={selectedPhoto !== null} onOpenChange={(value) => { if (!value) setSelectedPhoto(null); }}><DialogContent className="n03-lightbox border-0 rounded-none"><DialogTitle className="sr-only">Foto pasangan</DialogTitle>{selectedPhoto && <img src={selectedPhoto} alt="Foto contoh pasangan diperbesar"/>}</DialogContent></Dialog>
     </>}
   </div>;
 }
