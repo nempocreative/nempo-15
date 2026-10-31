@@ -35,7 +35,32 @@
   --color-accent: var(--n05-soft);
   --color-accent-foreground: var(--n05-navy);
 }
-.nempo-four {
+.nempo-one.nempo-six {
+  --n06-paper: oklch(0.985 0.003 250);
+  --n06-navy: oklch(0.29 0.065 265);
+  --n06-gold: oklch(0.57 0.08 85);
+  --n06-line: oklch(0.82 0.025 250);
+  --n06-soft: oklch(0.95 0.012 250);
+  --n06-sky: oklch(0.88 0.03 240);
+  --n06-shadow: 0 8px 28px color-mix(in oklab,var(--n06-navy) 12%,transparent);
+  --background: var(--n06-paper);
+  --foreground: var(--n06-navy);
+  --primary: var(--n06-navy);
+  --primary-border: var(--n06-navy);
+  --border: var(--n06-line);
+  --inv-soft: var(--n06-soft);
+  --color-background: var(--n06-paper);
+  --color-foreground: var(--n06-navy);
+  --color-primary: var(--n06-navy);
+  --color-primary-foreground: var(--n06-paper);
+  --color-border: var(--n06-line);
+  --color-input: var(--n06-line);
+  --color-ring: var(--n06-gold);
+  --color-muted: var(--n06-soft);
+  --color-muted-foreground: var(--n06-navy);
+  --color-accent: var(--n06-soft);
+  --color-accent-foreground: var(--n06-navy);
+}
 .nempo-four {
   --n04-paper: #fff9f6;
   --n04-peach: #f4d7ce;
