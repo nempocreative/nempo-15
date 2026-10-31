@@ -33,6 +33,14 @@ export function Nempo03Invitation() {
     const timer = window.setInterval(() => setNow(Date.now()), 1000);
     return () => window.clearInterval(timer);
   }, []);
+  useEffect(() => {
+    if (!open) return;
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add("n01-visible"); observer.unobserve(entry.target); }
+    }), { threshold: 0.15 });
+    document.querySelectorAll(".nempo-three main section").forEach((element) => { element.classList.add("n01-reveal"); observer.observe(element); });
+    return () => observer.disconnect();
+  }, [open]);
   async function toggleMusic() {
     const audio = audioRef.current;
     if (!audio) return;
