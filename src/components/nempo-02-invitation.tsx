@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, BookHeart, CalendarHeart, CalendarPlus, Clock, Flower2, Gift, Heart, MapPin, MessageCircle, Quote, Send, Shirt, ShieldCheck, Users, Volume2, VolumeX } from "lucide-react";
+import { ArrowLeft, BookHeart, CalendarHeart, CalendarPlus, Clock, Flower2, Gift, Heart, Leaf, MapPin, MessageCircle, Quote, Send, Shirt, ShieldCheck, Users, Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/lib/wouter";
 import { NEMPO_WA_URL } from "@/lib/contact";
@@ -82,10 +82,11 @@ export function Nempo02Invitation() {
 
     {stage !== "open" ? <section className={`n02-cover relative flex min-h-svh items-center justify-center overflow-hidden px-6 py-16 text-center ${stage === "opening" ? "n02-opening" : "n01-enter"}`}>
       <Stage/>
-      <Link href="/wedding-invitation#tema" className="n01-blue n01-body absolute left-5 top-5 z-10 inline-flex items-center gap-2 text-xs"><ArrowLeft className="size-4"/> Pilihan tema</Link>
-      <div className="n02-frame n02-paper relative z-[1] w-full max-w-md overflow-hidden rounded-sm px-6 py-12 sm:px-12 sm:py-16">
+      <Link href="/wedding-invitation#tema" className="n02-back n01-blue n01-body absolute left-5 top-5 z-10 inline-flex items-center gap-2 text-xs"><ArrowLeft className="size-4"/> Pilihan tema</Link>
+      <div className="n02-frame n02-paper relative z-[1] w-full max-w-md overflow-hidden rounded-sm px-6 py-12 sm:px-12 sm:py-20">
         <Blooms/>
-        <p className="n01-label n01-blue">NEMPO 02 · Biru Bunga</p>
+        <div className="n02-garland mx-auto flex items-center justify-center gap-2 opacity-75"><Leaf className="n01-blue size-4 -scale-x-100" strokeWidth={1}/><Flower2 className="n01-blue size-5" strokeWidth={1}/><Leaf className="n01-blue size-4" strokeWidth={1}/></div>
+        <p className="n01-label n01-blue mt-6">NEMPO 02 · Biru Bunga</p>
         <div className="n02-monogram mx-auto mt-8"><span className="n01-blue text-4xl">H<span className="n02-gold italic">&</span>A</span></div>
         <p className="n01-label mt-8 opacity-70">The wedding of</p>
         <h1 className="n01-blue mt-3 text-4xl leading-tight sm:text-5xl">Habib <span className="n02-gold italic">&</span> Adiba</h1>
@@ -130,7 +131,7 @@ export function Nempo02Invitation() {
 
       <section id="susunan" className="relative mx-auto max-w-5xl scroll-mt-20 px-6 py-16">
         <div className="text-center"><Clock className="n01-blue mx-auto size-6" strokeWidth={1}/><p className="n01-label n01-blue mt-3">Rundown</p><h2 className="mt-3 text-3xl">Susunan acara</h2></div>
-        <div className="mx-auto mt-10 grid max-w-4xl gap-8 sm:grid-cols-[1fr_260px] sm:items-start">
+        <div className="mx-auto mt-10 grid max-w-4xl gap-8 sm:grid-cols-[1fr_260px] sm:items-center">
           <ol className="n01-line w-full max-w-md space-y-6 border-l pl-7 sm:mx-auto">{rundown.map(([t, label]) => <li key={t} className="relative"><span className="n01-timeline-dot absolute -left-9 top-1 size-4 rounded-full"/><p className="n01-label n02-gold">{t} WIB</p><p className="mt-1 text-lg">{label}</p></li>)}</ol>
           <aside className="n02-paper n01-line rounded-lg border p-6 text-center"><Quote className="n02-gold mx-auto size-5" strokeWidth={1}/><p className="n01-label n01-blue mt-4">Catatan tamu</p><p className="n01-body mt-3 text-xs leading-7">Acara dimulai tepat waktu. Mohon berkenan hadir 15 menit lebih awal agar kami dapat menyambut Anda dengan hangat.</p></aside>
         </div>

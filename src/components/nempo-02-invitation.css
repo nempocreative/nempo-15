@@ -12,6 +12,7 @@
 .nempo-two .n02-bloom-tl{top:-18px;left:-18px;transform-origin:top left}
 .nempo-two .n02-bloom-br{bottom:-18px;right:-18px;transform-origin:bottom right}
 .nempo-two .n02-opening{animation:n02-open 1s ease-in both}
+.nempo-two .n02-back{background:color-mix(in srgb,var(--inv-paper) 88%,transparent);border:1px solid var(--border);border-radius:999px;padding:6px 12px}
 .nempo-two .n02-stage{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .nempo-two .n02-stage::before{content:"";position:absolute;inset:40px;border:1px solid var(--border);opacity:.55}
 .nempo-two .n02-corner{position:absolute;width:58px;height:58px;border:1px solid var(--inv-gold);opacity:.8}
