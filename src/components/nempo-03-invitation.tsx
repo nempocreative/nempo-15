@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, BookHeart, CalendarHeart, CalendarPlus, Flower2, Heart, Images, Leaf, MailOpen, MapPin, MessageCircle, Send, Volume2, VolumeX, X } from "lucide-react";
+import { ArrowLeft, BookHeart, CalendarHeart, CalendarPlus, Flower2, Heart, Images, Leaf, MailOpen, MapPin, MessageCircle, Send, Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogClose, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Link } from "@/lib/wouter";
 import { NEMPO_WA_URL } from "@/lib/contact";
 import { Nempo01Guestbook } from "./nempo-01-guestbook";
