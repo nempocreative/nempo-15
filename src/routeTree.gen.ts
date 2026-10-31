@@ -32,6 +32,7 @@ import { Route as NempoMouSplatRouteImport } from './routes/nempo-mou.$'
 import { Route as TionFeedIndexRouteImport } from './routes/tion-feed.index'
 import { Route as TionFeedSplatRouteImport } from './routes/tion-feed.$'
 import { Route as WeddingInvitationTemaNavyEleganRouteImport } from './routes/wedding-invitation.tema.navy-elegan'
+import { Route as WeddingInvitationTemaNavyEleganTanpaFotoRouteImport } from './routes/wedding-invitation.tema.navy-elegan-tanpa-foto'
 import { Route as WeddingInvitationTemaPeachKlasikTanpaFotoRouteImport } from './routes/wedding-invitation.tema.peach-klasik-tanpa-foto'
 
 const IndexRoute = IndexRouteImport.update({
@@ -150,6 +151,12 @@ const WeddingInvitationTemaNavyEleganRoute =
     path: '/tema/navy-elegan',
     getParentRoute: () => WeddingInvitationRoute,
   } as any)
+const WeddingInvitationTemaNavyEleganTanpaFotoRoute =
+  WeddingInvitationTemaNavyEleganTanpaFotoRouteImport.update({
+    id: '/tema/navy-elegan-tanpa-foto',
+    path: '/tema/navy-elegan-tanpa-foto',
+    getParentRoute: () => WeddingInvitationRoute,
+  } as any)
 const WeddingInvitationTemaPeachKlasikTanpaFotoRoute =
   WeddingInvitationTemaPeachKlasikTanpaFotoRouteImport.update({
     id: '/tema/peach-klasik-tanpa-foto',
@@ -181,6 +188,7 @@ export interface FileRoutesByFullPath {
   '/nempo-mou/': typeof NempoMouIndexRoute
   '/tion-feed/': typeof TionFeedIndexRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
+  '/wedding-invitation/tema/navy-elegan-tanpa-foto': typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
 }
 export interface FileRoutesByTo {
@@ -207,6 +215,7 @@ export interface FileRoutesByTo {
   '/nempo-mou': typeof NempoMouIndexRoute
   '/tion-feed': typeof TionFeedIndexRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
+  '/wedding-invitation/tema/navy-elegan-tanpa-foto': typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
 }
 export interface FileRoutesById {
@@ -234,6 +243,7 @@ export interface FileRoutesById {
   '/nempo-mou/': typeof NempoMouIndexRoute
   '/tion-feed/': typeof TionFeedIndexRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
+  '/wedding-invitation/tema/navy-elegan-tanpa-foto': typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
 }
 export interface FileRouteTypes {
@@ -262,6 +272,7 @@ export interface FileRouteTypes {
     | '/nempo-mou/'
     | '/tion-feed/'
     | '/wedding-invitation/tema/navy-elegan'
+    | '/wedding-invitation/tema/navy-elegan-tanpa-foto'
     | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -288,6 +299,7 @@ export interface FileRouteTypes {
     | '/nempo-mou'
     | '/tion-feed'
     | '/wedding-invitation/tema/navy-elegan'
+    | '/wedding-invitation/tema/navy-elegan-tanpa-foto'
     | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
   id:
     | '__root__'
@@ -314,6 +326,7 @@ export interface FileRouteTypes {
     | '/nempo-mou/'
     | '/tion-feed/'
     | '/wedding-invitation/tema/navy-elegan'
+    | '/wedding-invitation/tema/navy-elegan-tanpa-foto'
     | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
   fileRoutesById: FileRoutesById
 }
@@ -505,6 +518,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WeddingInvitationTemaNavyEleganRouteImport
       parentRoute: typeof WeddingInvitationRoute
     }
+    '/wedding-invitation/tema/navy-elegan-tanpa-foto': {
+      id: '/wedding-invitation/tema/navy-elegan-tanpa-foto'
+      path: '/tema/navy-elegan-tanpa-foto'
+      fullPath: '/wedding-invitation/tema/navy-elegan-tanpa-foto'
+      preLoaderRoute: typeof WeddingInvitationTemaNavyEleganTanpaFotoRouteImport
+      parentRoute: typeof WeddingInvitationRoute
+    }
     '/wedding-invitation/tema/peach-klasik-tanpa-foto': {
       id: '/wedding-invitation/tema/peach-klasik-tanpa-foto'
       path: '/tema/peach-klasik-tanpa-foto'
@@ -517,11 +537,14 @@ declare module '@tanstack/react-router' {
 
 interface WeddingInvitationRouteChildren {
   WeddingInvitationTemaNavyEleganRoute: typeof WeddingInvitationTemaNavyEleganRoute
+  WeddingInvitationTemaNavyEleganTanpaFotoRoute: typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   WeddingInvitationTemaPeachKlasikTanpaFotoRoute: typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
 }
 
 const WeddingInvitationRouteChildren: WeddingInvitationRouteChildren = {
   WeddingInvitationTemaNavyEleganRoute: WeddingInvitationTemaNavyEleganRoute,
+  WeddingInvitationTemaNavyEleganTanpaFotoRoute:
+    WeddingInvitationTemaNavyEleganTanpaFotoRoute,
   WeddingInvitationTemaPeachKlasikTanpaFotoRoute:
     WeddingInvitationTemaPeachKlasikTanpaFotoRoute,
 }
