@@ -11,7 +11,8 @@
 .nempo-six .n06-recipient{width:100%;max-width:430px;padding:16px 12px;background:color-mix(in oklab,var(--n06-paper) 93%,transparent);border-block:1px solid var(--n06-line)}
 .nempo-six .n06-opening-note{background:var(--n06-navy);color:var(--n06-paper);padding:24px;text-align:center}
 .nempo-six .n06-intro{padding:80px 24px;text-align:center;overflow:hidden}
-.nempo-six .n06-couple-stage{width:min(330px,76%);margin:36px auto 0;padding:28px 22px 34px;border:1px solid var(--n06-line);border-radius:240px 240px 0 0;background:linear-gradient(180deg,var(--n06-soft),var(--n06-paper));overflow:hidden}
+.nempo-six .n06-couple-stage{position:relative;width:min(330px,76%);margin:36px auto 0;padding:28px 22px 34px;border:1px solid var(--n06-line);border-radius:240px 240px 0 0;background:linear-gradient(180deg,var(--n06-soft),var(--n06-paper));overflow:hidden}
+.nempo-six .n06-couple-stage:after{content:"";position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:62%;height:14px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in oklab,var(--n06-navy) 16%,transparent),transparent)}
 .nempo-six .n06-couple-illu{display:block;width:100%;height:auto;animation:n06-float 6s ease-in-out infinite}
 .nempo-six .n06-couple{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;max-width:860px;margin:40px auto}
 .nempo-six .n06-couple article{border-block:1px solid var(--n06-line);padding:32px 12px}
