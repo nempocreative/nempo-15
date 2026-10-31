@@ -32,6 +32,7 @@ import { Route as NempoMouSplatRouteImport } from './routes/nempo-mou.$'
 import { Route as TionFeedIndexRouteImport } from './routes/tion-feed.index'
 import { Route as TionFeedSplatRouteImport } from './routes/tion-feed.$'
 import { Route as WeddingInvitationTemaHitamMewahRouteImport } from './routes/wedding-invitation.tema.hitam-mewah'
+import { Route as WeddingInvitationTemaHitamMewahTanpaFotoRouteImport } from './routes/wedding-invitation.tema.hitam-mewah-tanpa-foto'
 import { Route as WeddingInvitationTemaMoccaHangatRouteImport } from './routes/wedding-invitation.tema.mocca-hangat'
 import { Route as WeddingInvitationTemaMoccaHangatTanpaFotoRouteImport } from './routes/wedding-invitation.tema.mocca-hangat-tanpa-foto'
 import { Route as WeddingInvitationTemaNavyEleganRouteImport } from './routes/wedding-invitation.tema.navy-elegan'
@@ -154,6 +155,12 @@ const WeddingInvitationTemaHitamMewahRoute =
     path: '/tema/hitam-mewah',
     getParentRoute: () => WeddingInvitationRoute,
   } as any)
+const WeddingInvitationTemaHitamMewahTanpaFotoRoute =
+  WeddingInvitationTemaHitamMewahTanpaFotoRouteImport.update({
+    id: '/tema/hitam-mewah-tanpa-foto',
+    path: '/tema/hitam-mewah-tanpa-foto',
+    getParentRoute: () => WeddingInvitationRoute,
+  } as any)
 const WeddingInvitationTemaMoccaHangatRoute =
   WeddingInvitationTemaMoccaHangatRouteImport.update({
     id: '/tema/mocca-hangat',
@@ -209,6 +216,7 @@ export interface FileRoutesByFullPath {
   '/nempo-mou/': typeof NempoMouIndexRoute
   '/tion-feed/': typeof TionFeedIndexRoute
   '/wedding-invitation/tema/hitam-mewah': typeof WeddingInvitationTemaHitamMewahRoute
+  '/wedding-invitation/tema/hitam-mewah-tanpa-foto': typeof WeddingInvitationTemaHitamMewahTanpaFotoRoute
   '/wedding-invitation/tema/mocca-hangat': typeof WeddingInvitationTemaMoccaHangatRoute
   '/wedding-invitation/tema/mocca-hangat-tanpa-foto': typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
@@ -239,6 +247,7 @@ export interface FileRoutesByTo {
   '/nempo-mou': typeof NempoMouIndexRoute
   '/tion-feed': typeof TionFeedIndexRoute
   '/wedding-invitation/tema/hitam-mewah': typeof WeddingInvitationTemaHitamMewahRoute
+  '/wedding-invitation/tema/hitam-mewah-tanpa-foto': typeof WeddingInvitationTemaHitamMewahTanpaFotoRoute
   '/wedding-invitation/tema/mocca-hangat': typeof WeddingInvitationTemaMoccaHangatRoute
   '/wedding-invitation/tema/mocca-hangat-tanpa-foto': typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
@@ -270,6 +279,7 @@ export interface FileRoutesById {
   '/nempo-mou/': typeof NempoMouIndexRoute
   '/tion-feed/': typeof TionFeedIndexRoute
   '/wedding-invitation/tema/hitam-mewah': typeof WeddingInvitationTemaHitamMewahRoute
+  '/wedding-invitation/tema/hitam-mewah-tanpa-foto': typeof WeddingInvitationTemaHitamMewahTanpaFotoRoute
   '/wedding-invitation/tema/mocca-hangat': typeof WeddingInvitationTemaMoccaHangatRoute
   '/wedding-invitation/tema/mocca-hangat-tanpa-foto': typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
@@ -302,6 +312,7 @@ export interface FileRouteTypes {
     | '/nempo-mou/'
     | '/tion-feed/'
     | '/wedding-invitation/tema/hitam-mewah'
+    | '/wedding-invitation/tema/hitam-mewah-tanpa-foto'
     | '/wedding-invitation/tema/mocca-hangat'
     | '/wedding-invitation/tema/mocca-hangat-tanpa-foto'
     | '/wedding-invitation/tema/navy-elegan'
@@ -332,6 +343,7 @@ export interface FileRouteTypes {
     | '/nempo-mou'
     | '/tion-feed'
     | '/wedding-invitation/tema/hitam-mewah'
+    | '/wedding-invitation/tema/hitam-mewah-tanpa-foto'
     | '/wedding-invitation/tema/mocca-hangat'
     | '/wedding-invitation/tema/mocca-hangat-tanpa-foto'
     | '/wedding-invitation/tema/navy-elegan'
@@ -362,6 +374,7 @@ export interface FileRouteTypes {
     | '/nempo-mou/'
     | '/tion-feed/'
     | '/wedding-invitation/tema/hitam-mewah'
+    | '/wedding-invitation/tema/hitam-mewah-tanpa-foto'
     | '/wedding-invitation/tema/mocca-hangat'
     | '/wedding-invitation/tema/mocca-hangat-tanpa-foto'
     | '/wedding-invitation/tema/navy-elegan'
@@ -557,6 +570,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WeddingInvitationTemaHitamMewahRouteImport
       parentRoute: typeof WeddingInvitationRoute
     }
+    '/wedding-invitation/tema/hitam-mewah-tanpa-foto': {
+      id: '/wedding-invitation/tema/hitam-mewah-tanpa-foto'
+      path: '/tema/hitam-mewah-tanpa-foto'
+      fullPath: '/wedding-invitation/tema/hitam-mewah-tanpa-foto'
+      preLoaderRoute: typeof WeddingInvitationTemaHitamMewahTanpaFotoRouteImport
+      parentRoute: typeof WeddingInvitationRoute
+    }
     '/wedding-invitation/tema/mocca-hangat': {
       id: '/wedding-invitation/tema/mocca-hangat'
       path: '/tema/mocca-hangat'
@@ -597,6 +617,7 @@ declare module '@tanstack/react-router' {
 
 interface WeddingInvitationRouteChildren {
   WeddingInvitationTemaHitamMewahRoute: typeof WeddingInvitationTemaHitamMewahRoute
+  WeddingInvitationTemaHitamMewahTanpaFotoRoute: typeof WeddingInvitationTemaHitamMewahTanpaFotoRoute
   WeddingInvitationTemaMoccaHangatRoute: typeof WeddingInvitationTemaMoccaHangatRoute
   WeddingInvitationTemaMoccaHangatTanpaFotoRoute: typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   WeddingInvitationTemaNavyEleganRoute: typeof WeddingInvitationTemaNavyEleganRoute
@@ -606,6 +627,8 @@ interface WeddingInvitationRouteChildren {
 
 const WeddingInvitationRouteChildren: WeddingInvitationRouteChildren = {
   WeddingInvitationTemaHitamMewahRoute: WeddingInvitationTemaHitamMewahRoute,
+  WeddingInvitationTemaHitamMewahTanpaFotoRoute:
+    WeddingInvitationTemaHitamMewahTanpaFotoRoute,
   WeddingInvitationTemaMoccaHangatRoute: WeddingInvitationTemaMoccaHangatRoute,
   WeddingInvitationTemaMoccaHangatTanpaFotoRoute:
     WeddingInvitationTemaMoccaHangatTanpaFotoRoute,
