@@ -6,6 +6,7 @@ import { NEMPO_WA_URL } from "@/lib/contact";
 import { Nempo01Guestbook } from "./nempo-01-guestbook";
 import { Nempo01Gifts } from "./nempo-01-gifts";
 import musicAsset from "@/assets/nempo-01-beautiful-in-white.mp3.asset.json";
+import coupleIllustration from "@/assets/nempo-02-couple-illustration.png";
 import "./nempo-01-invitation.css";
 import "./nempo-02-invitation.css";
 
@@ -86,7 +87,7 @@ export function Nempo02Invitation() {
         <Blooms/>
         <div className="n02-garland mx-auto flex items-center justify-center gap-2 opacity-75"><Leaf className="n01-blue size-4 -scale-x-100" strokeWidth={1}/><Flower2 className="n01-blue size-5" strokeWidth={1}/><Leaf className="n01-blue size-4" strokeWidth={1}/></div>
         <p className="n01-label n01-blue mt-6">NEMPO 02 · Biru Bunga</p>
-        <div className="n02-monogram mx-auto mt-8"><span className="n01-blue text-4xl">H<span className="n02-gold italic">&</span>A</span></div>
+        <div className="n02-illu n02-illu-cover mx-auto mt-8"><img src={coupleIllustration} alt="Ilustrasi pasangan pengantin" width={768} height={1024}/></div>
         <p className="n01-label mt-8 opacity-70">The wedding of</p>
         <h1 className="n01-blue mt-3 text-4xl leading-tight sm:text-5xl">Habib <span className="n02-gold italic">&</span> Adiba</h1>
         <p className="mt-3 text-base">Minggu, 20 . 12 . 2026</p>
@@ -106,7 +107,7 @@ export function Nempo02Invitation() {
         <p className="n01-body mx-auto mt-4 max-w-md text-xs leading-7">Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:</p>
         <div className="mx-auto mt-10 grid max-w-3xl items-center gap-6 sm:grid-cols-[1fr_auto_1fr]">
           <div className="n02-arch px-6 py-10"><Flower2 className="n01-blue mx-auto size-6" strokeWidth={1}/><h3 className="n01-blue mt-4 text-3xl">Habib Ramadhan</h3><p className="n01-body mt-3 text-xs leading-6">Putra pertama dari<br/>Bapak Ahmad & Ibu Siti</p></div>
-          <span className="n02-gold text-4xl italic">&</span>
+          <div className="flex flex-col items-center gap-3"><div className="n02-illu n02-illu-arch"><img src={coupleIllustration} alt="Ilustrasi pasangan pengantin" loading="lazy" width={768} height={1024}/></div><span className="n02-gold text-4xl italic">&</span></div>
           <div className="n02-arch px-6 py-10"><Flower2 className="n01-blue mx-auto size-6" strokeWidth={1}/><h3 className="n01-blue mt-4 text-3xl">Adiba Nurul</h3><p className="n01-body mt-3 text-xs leading-6">Putri kedua dari<br/>Bapak Hasan & Ibu Aisyah</p></div>
         </div>
         <blockquote className="n01-line mx-auto mt-12 max-w-xl border-t pt-8 text-base italic leading-8">“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu merasa tenteram kepadanya.”</blockquote>
