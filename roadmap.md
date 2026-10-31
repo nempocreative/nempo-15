@@ -1,4 +1,5 @@
 # Roadmap
+- [x] NEMPO 07: Mocca Hangat Foto, desain botanical vintage, acara, cerita, galeri, RSVP, dan kado pratinjau; kartu tema, kalender, ucapan, dan tampilan ponsel/komputer diperiksa.
 - [x] Periksa migration remix terbaru: migration salinan sudah kosong, jurnal tanpa entri, database tidak diubah.
 - [x] NEMPO 06: Navy Elegan Tanpa Foto dengan cartoon pengantin beranimasi, acara, cerita, RSVP, dan kado contoh.
 - [x] NEMPO 06: sampul dua kolom di layar besar, ilustrasi cerita tersendiri, bingkai lengkung mempelai dengan bayangan, dan nama file kalender yang benar.
