@@ -15,7 +15,7 @@ import { invitationCategories, filterInvitationThemes, type InvitationCategoryKe
 import nempo01Photo from "@/assets/nempo-01-ai-couple.jpg";
 import nempo02Illustration from "@/assets/nempo-02-card-illustration.png";
 import nempo03Cover from "@/assets/nempo-03-wedding-cover.jpg";
-import nempo04Garden from "@/assets/nempo-04-garden.jpg";
+import nempo04CoupleScene from "@/assets/nempo-04-couple-scene.jpg";
 
 const serif = "font-[family-name:var(--font-wed-serif)]";
 const hand = "font-[family-name:var(--font-wed-hand)]";
