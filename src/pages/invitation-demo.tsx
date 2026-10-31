@@ -10,6 +10,7 @@ import { Nempo04Invitation } from "@/components/nempo-04-invitation";
 import { Nempo05Invitation } from "@/components/nempo-05-invitation";
 import { Nempo06Invitation } from "@/components/nempo-06-invitation";
 import { Nempo07Invitation } from "@/components/nempo-07-invitation";
+import { Nempo08Invitation } from "@/components/nempo-08-invitation";
 
 const serif = "font-[family-name:var(--font-wed-serif)]";
 const hand = "font-[family-name:var(--font-wed-hand)]";
@@ -44,7 +45,7 @@ export default function InvitationDemoPage() {
   const [open, setOpen] = useState(false);
   const cd = useCountdown(new Date("2026-12-20T09:00:00+07:00").getTime());
 
-  useEffect(() => { document.body.style.overflow = open || ["NEMPO 01", "NEMPO 02", "NEMPO 03", "NEMPO 04", "NEMPO 05", "NEMPO 06", "NEMPO 07"].includes(theme?.code ?? "") ? "" : "hidden"; return () => { document.body.style.overflow = ""; }; }, [open, theme?.code]);
+  useEffect(() => { document.body.style.overflow = open || ["NEMPO 01", "NEMPO 02", "NEMPO 03", "NEMPO 04", "NEMPO 05", "NEMPO 06", "NEMPO 07", "NEMPO 08"].includes(theme?.code ?? "") ? "" : "hidden"; return () => { document.body.style.overflow = ""; }; }, [open, theme?.code]);
 
   if (!theme) return null;
   if (theme.code === "NEMPO 01") return <Nempo01Invitation />;
@@ -54,6 +55,7 @@ export default function InvitationDemoPage() {
   if (theme.code === "NEMPO 05") return <Nempo05Invitation />;
   if (theme.code === "NEMPO 06") return <Nempo06Invitation />;
   if (theme.code === "NEMPO 07") return <Nempo07Invitation />;
+  if (theme.code === "NEMPO 08") return <Nempo08Invitation />;
   const c = theme.colors;
 
   return (
