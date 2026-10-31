@@ -35,7 +35,7 @@
 @media(min-width:900px){
   .nempo-eight .n08-cover{height:92svh;min-height:720px;max-height:1100px}
   .nempo-eight .n08-cover-text{padding-top:70px}
-  .nempo-eight .n08-scene{object-position:center 56%}
+  .nempo-eight .n08-scene{object-position:center top}
   .nempo-eight .n08-cover h1{font-size:58px}
   .nempo-eight .n08-couple-stage{width:min(360px,46%)}
 }
