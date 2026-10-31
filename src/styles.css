@@ -35,6 +35,33 @@
   --color-accent: var(--n05-soft);
   --color-accent-foreground: var(--n05-navy);
 }
+.nempo-one.nempo-seven {
+  --n07-paper: oklch(0.985 0.008 85);
+  --n07-ink: oklch(0.32 0.025 65);
+  --n07-sage: oklch(0.43 0.035 145);
+  --n07-line: oklch(0.82 0.025 75);
+  --n07-soft: oklch(0.95 0.015 85);
+  --n07-shade: linear-gradient(180deg, color-mix(in oklab,var(--n07-ink) 65%,transparent), transparent 48%, color-mix(in oklab,var(--n07-ink) 85%,transparent));
+  --n07-shadow: 0 8px 30px color-mix(in oklab,var(--n07-ink) 14%,transparent);
+  --background: var(--n07-paper);
+  --foreground: var(--n07-ink);
+  --primary: var(--n07-sage);
+  --primary-foreground: var(--n07-paper);
+  --primary-border: var(--n07-sage);
+  --border: var(--n07-line);
+  --inv-soft: var(--n07-soft);
+  --color-background: var(--n07-paper);
+  --color-foreground: var(--n07-ink);
+  --color-primary: var(--n07-sage);
+  --color-primary-foreground: var(--n07-paper);
+  --color-border: var(--n07-line);
+  --color-input: var(--n07-line);
+  --color-ring: var(--n07-sage);
+  --color-muted: var(--n07-soft);
+  --color-muted-foreground: var(--n07-sage);
+  --color-accent: var(--n07-soft);
+  --color-accent-foreground: var(--n07-ink);
+}
 .nempo-one.nempo-six {
   --n06-paper: oklch(0.985 0.003 250);
   --n06-navy: oklch(0.29 0.065 265);
