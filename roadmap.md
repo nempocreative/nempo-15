@@ -1,4 +1,5 @@
 # Roadmap
+- [ ] NEMPO 03: desain Peach Klasik Foto, galeri, acara, cerita, dan RSVP pratinjau.
 - [x] Tambah musik latar dan kartu hadiah rekening/QRIS contoh di NEMPO 01; data pembayaran asli menunggu pengguna.
 - [x] Ganti foto NEMPO 01 dengan pasangan AI berbusana biru dan ivory, termasuk galeri dan kartu tema.
 - [x] Lengkapi NEMPO 01 dengan cerita, kalender, galeri, RSVP dan ucapan contoh, serta animasi halus.
