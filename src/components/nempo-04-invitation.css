@@ -14,6 +14,7 @@
 .nempo-four .n04-divider{width:54px;border-top:1px solid var(--n04-rose);margin:22px auto}
 .nempo-four .n04-opening-note{background:var(--n04-peach);padding:22px;text-align:center}
 .nempo-four .n04-intro{position:relative;padding:80px 24px;text-align:center;overflow:hidden}
+.nempo-four .n04-couple-illu{display:block;width:min(230px,58%);margin:36px auto 0;animation:n04-float 7s ease-in-out infinite;filter:drop-shadow(0 10px 16px rgba(90,62,48,.16))}
 .nempo-four .n04-couple{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;max-width:800px;margin:40px auto}
 .nempo-four .n04-couple article{border-top:1px solid var(--n04-line);border-bottom:1px solid var(--n04-line);padding:34px 16px}
 .nempo-four .n04-sprig{color:var(--n04-sage);animation:n04-sprig 7s ease-in-out infinite}
@@ -35,4 +36,5 @@
 @keyframes n04-sprig{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
 @media(min-width:900px){.nempo-four .n04-garden{object-fit:contain;background:var(--n04-paper)}.nempo-four .n04-cover:before,.nempo-four .n04-cover:after{content:"";position:absolute;top:25%;bottom:25%;width:12%;border-block:1px solid var(--n04-line);z-index:-1}.nempo-four .n04-cover:before{left:6%}.nempo-four .n04-cover:after{right:6%}}
 @media(max-width:639px){.nempo-four .n04-title{font-size:44px}.nempo-four .n04-monogram{font-size:40px}.nempo-four .n04-cover{padding:76px 45px 48px}.nempo-four .n04-couple{grid-template-columns:1fr;gap:12px}.nempo-four .n04-couple article{padding:28px 12px}.nempo-four .n04-events{grid-template-columns:1fr}.nempo-four .n04-story{grid-template-columns:1fr;gap:32px}.nempo-four .n04-story img{max-width:280px;margin:auto}.nempo-four .n04-nav{gap:14px}}
-@media(prefers-reduced-motion:reduce){.nempo-four .n04-garden,.nempo-four .n04-cover-content,.nempo-four .n04-sprig{animation:none}}
+@keyframes n04-float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-8px) scale(1.02)}}
+@media(prefers-reduced-motion:reduce){.nempo-four .n04-garden,.nempo-four .n04-cover-content,.nempo-four .n04-sprig,.nempo-four .n04-couple-illu{animation:none}}

@@ -15,7 +15,7 @@ import { invitationCategories, filterInvitationThemes, type InvitationCategoryKe
 import nempo01Photo from "@/assets/nempo-01-ai-couple.jpg";
 import nempo02Illustration from "@/assets/nempo-02-card-illustration.png";
 import nempo03Cover from "@/assets/nempo-03-wedding-cover.jpg";
-import nempo04Garden from "@/assets/nempo-04-garden.jpg";
+import nempo04CoupleScene from "@/assets/nempo-04-couple-scene.jpg";
 
 const serif = "font-[family-name:var(--font-wed-serif)]";
 const hand = "font-[family-name:var(--font-wed-hand)]";
@@ -217,7 +217,7 @@ export default function WeddingInvitationPage() {
                     <span className="absolute top-3 text-[10px] font-bold tracking-widest" style={{ color: t.colors.ink }}>{t.code}</span>
                     <div className="flex h-[66%] w-[45%] flex-col items-center justify-center rounded-2xl border-4 p-2 text-center shadow-xl transition group-hover:rotate-2" style={{ background: t.colors.surface, borderColor: t.colors.ink, color: t.colors.ink }}>
                       <span className="text-[8px] uppercase tracking-widest">The Wedding of</span>
-                      {t.withPhoto ? <img src={t.code === "NEMPO 01" ? nempo01Photo : t.code === "NEMPO 03" ? nempo03Cover : "/images/invitation-hero.jpg"} alt="" loading="lazy" className="my-1 h-10 w-8 rounded-t-full object-cover object-top sm:h-14 sm:w-10" /> : t.code === "NEMPO 02" || t.code === "NEMPO 04" ? <img src={t.code === "NEMPO 04" ? nempo04Garden : nempo02Illustration} alt="" loading="lazy" className="my-1 h-10 w-10 rounded-t-full object-cover object-top sm:h-14 sm:w-14" /> : <Heart aria-hidden className="my-2 h-6 w-6" />}
+                      {t.withPhoto ? <img src={t.code === "NEMPO 01" ? nempo01Photo : t.code === "NEMPO 03" ? nempo03Cover : "/images/invitation-hero.jpg"} alt="" loading="lazy" className="my-1 h-10 w-8 rounded-t-full object-cover object-top sm:h-14 sm:w-10" /> : t.code === "NEMPO 02" || t.code === "NEMPO 04" ? <img src={t.code === "NEMPO 04" ? nempo04CoupleScene : nempo02Illustration} alt="" loading="lazy" className="my-1 h-10 w-10 rounded-t-full object-cover object-top sm:h-14 sm:w-14" /> : <Heart aria-hidden className="my-2 h-6 w-6" />}
                       <span className={`${hand} text-lg leading-tight`} style={{ color: t.colors.accent }}>Habib &amp; Adiba</span>
                       <span className="mt-1 rounded-full px-2 py-0.5 text-[7px]" style={{ background: t.colors.accent, color: t.colors.surface }}>Buka Undangan</span>
                     </div>
