@@ -1,0 +1,36 @@
+# Roadmap
+- [x] Tambah musik latar dan kartu hadiah rekening/QRIS contoh di NEMPO 01; data pembayaran asli menunggu pengguna.
+- [x] Ganti foto NEMPO 01 dengan pasangan AI berbusana biru dan ivory, termasuk galeri dan kartu tema.
+- [x] Lengkapi NEMPO 01 dengan cerita, kalender, galeri, RSVP dan ucapan contoh, serta animasi halus.
+- [x] Perbagus NEMPO 01 sesuai kategori Spesial Foto dan tema Biru Bunga, memakai foto yang tersedia.
+- [x] Periksa migration kosong setelah remix, tanpa mengubah database.
+- [x] Beri setiap tema undangan kode berurutan NEMPO 01 dan seterusnya, tetap sama saat difilter.
+- [x] Tambah kategori tema undangan sesuai referensi, dengan pilihan foto dan tanpa foto yang bisa dibuka.
+- [x] Hapus unduhan moodboard dari studio wedding, tetap pertahankan konsultasi WhatsApp.
+- [x] Rapikan judul dan pilihan studio wedding supaya ringkas dan sejajar.
+- [x] Ganti ikon makeup dengan ikon sesuai gaya, termasuk Barbie tanpa bintang.
+- [x] Tambah foto ilustrasi contoh untuk kelima gaya makeup pengantin.
+- [x] Tambah jenis makeup Barbie, Bold, Natural, Soft Glam, Korean beserta pilihan konsultasi dan moodboard.
+- [x] Tambah pilihan khusus gaun dengan jas senada dalam empat tone, manekin tanpa wajah, konsultasi dan moodboard.
+- [x] Studio wedding: setiap kebaya didampingi busana pria senada di semua tone, termasuk moodboard.
+- [x] Foto pasangan busana tanpa wajah/orang, hanya pajangan baju lengkap.
+- [x] Manekin busana berleher tertutup dengan knop kuningan seperti referensi, tanpa wajah; ujung baju tidak diubah.
+- [x] Tambah pilihan inspirasi dekor pelaminan, kebaya, tone warna, dan konsep acara di Wedding Organizer, dengan rangkuman konsultasi WhatsApp.
+- [x] Migrate nempo-5 code into this project
+- [x] Migrate nempo-10 code + 18 tables into this project
+- [x] Recreate 18 database tables in Lovable Cloud
+- [ ] Import existing data — waiting for backup JSON from old app's /backup page
+- [x] Check remix-of-nempo-5 (older copy of nempo-5; nempo-5 used as source)
+- [ ] Login user & admin panel, Midtrans payments, SMTP email (carried over from old roadmap)
+- [x] Tambah event portofolio: Night Out Maxi (Temu Space), Color The Beat (Biang), Riuh Rona (Maru), Opening GGS (GGS Beauty)
+- [ ] Foto acara untuk kartu portofolio — menunggu foto dari pengguna
+- [x] Mitra Kami: tambah GGS Beauty
+- [x] Footer & teks "tentang": ubah dari nada wisata ke layanan kreatif/organizer
+- [x] Testimoni EO: 14 orang, nama + bagian saja, tanpa nama perusahaan
+- [x] Bersihkan migration Drizzle yang tersalin dari remix, set migration kosong baru (tabel di database tetap ada)
+- [x] Studio wedding: pilih tone warna langsung mengubah warna foto dekor pelaminan dan kebaya
+- [x] Studio wedding: foto dekor & kebaya versi asli per tone (4 tone × 4 dekor × 3 kebaya, tanpa tint CSS)
+- [x] Studio wedding: tambah pilihan tone warna, dekor, dan kebaya
+- [x] Studio wedding: transisi hover, penanda dipilih, dan ringkasan yang muncul dengan animasi
+- [x] Studio wedding: mode bandingkan — empat kombinasi tone + dekor + kebaya berdampingan
+- [x] Studio wedding: foto tampil penuh sesuai aslinya, tidak terpotong
