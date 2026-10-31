@@ -58,6 +58,7 @@ export function Nempo04Invitation() {
       <section className="n04-intro scroll-mt-8" id="mempelai">
         <Leaf className="n04-sprig mx-auto size-8" strokeWidth={1}/><p className="n01-label n01-blue mt-5">Bismillahirrahmanirrahim</p><h2 className="mt-5 text-4xl">Dua hati, satu janji</h2>
         <p className="n01-body mx-auto mt-5 max-w-lg text-xs leading-7">Dengan memohon rahmat dan ridha Allah SWT, kami mengundang Anda untuk hadir dan memberikan doa restu pada pernikahan kami.</p>
+        <img src={coupleIllu} alt="Cartoon mempelai Habib dan Adiba" width={768} height={1024} loading="lazy" className="n04-couple-illu"/>
         <div className="n04-couple"><article><Flower2 className="n04-rose mx-auto size-6" strokeWidth={1}/><h3 className="mt-5 text-3xl">Habib Ramadhan</h3><p className="n01-body mt-4 text-xs leading-7">Putra Bapak Ahmad &amp; Ibu Siti</p></article><span className="n04-rose text-4xl italic">&amp;</span><article><Flower2 className="n04-rose mx-auto size-6" strokeWidth={1}/><h3 className="mt-5 text-3xl">Adiba Nurul</h3><p className="n01-body mt-4 text-xs leading-7">Putri Bapak Hasan &amp; Ibu Aisyah</p></article></div>
         <blockquote className="mx-auto max-w-2xl text-lg italic leading-8">“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu merasa tenteram kepadanya.”</blockquote><p className="n01-label n04-rose mt-4">QS. Ar-Rum: 21</p>
       </section>
