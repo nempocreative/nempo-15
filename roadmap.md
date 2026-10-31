@@ -1,4 +1,5 @@
 # Roadmap
+- [ ] Periksa migration remix terbaru: pastikan migration salinan kosong tanpa mengubah database.
 - [x] NEMPO 06: Navy Elegan Tanpa Foto dengan cartoon pengantin beranimasi, acara, cerita, RSVP, dan kado contoh.
 - [x] NEMPO 05: Navy Elegan Foto, desain tersendiri, acara, cerita, galeri, RSVP, dan kado pratinjau.
 - [x] NEMPO 04: undangan Peach Klasik Tanpa Foto dengan ilustrasi taman bergerak, acara, cerita, RSVP, dan kado contoh.
