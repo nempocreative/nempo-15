@@ -36,6 +36,33 @@
   --color-accent-foreground: var(--n05-navy);
 }
 
+.nempo-one.nempo-twelve {
+  --n12-ink: oklch(0.33 0.06 260);
+  --n12-paper: oklch(0.99 0.003 250);
+  --n12-rose: oklch(0.52 0.12 10);
+  --n12-line: oklch(0.84 0.03 250);
+  --n12-soft: oklch(0.94 0.025 250);
+  --n12-shade: linear-gradient(90deg,color-mix(in oklab,var(--n12-paper) 94%,transparent),color-mix(in oklab,var(--n12-paper) 12%,transparent) 70%);
+  --n12-shadow: 0 8px 30px color-mix(in oklab,var(--n12-ink) 15%,transparent);
+  --background: var(--n12-paper);
+  --foreground: var(--n12-ink);
+  --primary: var(--n12-rose);
+  --primary-foreground: var(--n12-paper);
+  --primary-border: var(--n12-rose);
+  --border: var(--n12-line);
+  --inv-soft: var(--n12-soft);
+  --color-background: var(--n12-paper);
+  --color-foreground: var(--n12-ink);
+  --color-primary: var(--n12-rose);
+  --color-primary-foreground: var(--n12-paper);
+  --color-border: var(--n12-line);
+  --color-input: var(--n12-line);
+  --color-ring: var(--n12-rose);
+  --color-muted: var(--n12-soft);
+  --color-muted-foreground: var(--n12-ink);
+  --color-accent: var(--n12-soft);
+  --color-accent-foreground: var(--n12-ink);
+}
 .nempo-one.nempo-eleven {
   --n11-ink: oklch(0.33 0.06 260);
   --n11-paper: oklch(0.99 0.003 250);
