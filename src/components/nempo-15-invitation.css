@@ -73,3 +73,4 @@
 .nempo-fifteen .n15-gallery button{aspect-ratio:2/3}
 .nempo-fifteen .n15-gallery button:nth-child(2){margin-top:0}
 .nempo-fifteen .n15-monogram span{color:var(--n15-sage)}
+@media(max-width:899px){.nempo-fifteen .n15-cover:after{background:var(--n15-mobile-shade)}}

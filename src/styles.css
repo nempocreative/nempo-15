@@ -93,6 +93,7 @@
 }
 .nempo-one.nempo-fifteen {
   --n15-gold: oklch(0.82 0.07 85);
+  --n15-mobile-shade: linear-gradient(180deg, color-mix(in oklab, var(--n15-paper) 90%, transparent), color-mix(in oklab, var(--n15-paper) 80%, transparent) 27%, transparent 45%, transparent 72%, color-mix(in oklab, var(--n15-paper) 95%, transparent));
   --n15-sage: oklch(0.42 0.045 150);
   --n15-ink: oklch(0.29 0.055 12);
   --n15-paper: oklch(0.985 0.004 90);
