@@ -59,6 +59,7 @@ import { SlideSangkuriangComic } from './components/SlideSangkuriangComic';
 import { SlideSangkuriangCover } from './components/SlideSangkuriangCover';
 import { SlideTwentyNineCafeCover } from './components/SlideTwentyNineCafeCover';
 import { SlideThirtySumpahPemuda } from './components/SlideThirtySumpahPemuda';
+import { SlideThirtyOneBackground } from './components/SlideThirtyOneBackground';
 import { renderNempoSlide20Png } from './lib/renderNempoSlide20Png';
 import {
   GgsBeautySlideOne,
@@ -1874,7 +1875,7 @@ function FeedArtwork({
   slide: FeedSlide;
   exportRef: RefObject<HTMLElement | null>;
 }) {
-  // Slide 31 is an exact copy of slide 30, including its frame and branding.
+  // Slide 31 keeps slide 30's frame and branding, with its own background.
   const slide = selectedSlide === 31 ? 30 : selectedSlide;
   return (
     <main
@@ -1984,7 +1985,7 @@ function FeedArtwork({
         <FeedMotif />
       )}
       {slide === 1 && <CompactFooterArt />}
-      {slide === 30 && <SlideThirtySumpahPemuda />}
+      {selectedSlide === 31 ? <SlideThirtyOneBackground /> : slide === 30 && <SlideThirtySumpahPemuda />}
 
       <div
         className="relative z-10 flex h-full flex-col p-[7.5%]"
