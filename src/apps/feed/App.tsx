@@ -108,7 +108,8 @@ type FeedSlide =
   | 27
   | 28
   | 29
-  | 30;
+  | 30
+  | 31;
 
 type ClientSlide = 1 | 2 | 3 | 4 | 5 | 6;
 
@@ -1867,12 +1868,14 @@ function SlideNineOrder({
 }
 
 function FeedArtwork({
-  slide,
+  slide: selectedSlide,
   exportRef,
 }: {
   slide: FeedSlide;
   exportRef: RefObject<HTMLElement | null>;
 }) {
+  // Slide 31 is an exact copy of slide 30, including its frame and branding.
+  const slide = selectedSlide === 31 ? 30 : selectedSlide;
   return (
     <main
       ref={exportRef}
@@ -2113,7 +2116,7 @@ function FeedArtwork({
             </div>
           ) : slide === 1 ? (
             <span className="rounded-full border border-white/25 bg-[#062f4d]/25 px-2 py-1 text-[8px] font-black tracking-[0.12em] text-white/80">
-              0{slide} / 30
+              0{slide} / 31
             </span>
           ) : null}
         </header>
@@ -2620,7 +2623,7 @@ function App() {
     | 'calendar'
     | 'spreadsheet'
   >('nempo');
-  const [activeSlide, setActiveSlide] = useState<FeedSlide>(30);
+  const [activeSlide, setActiveSlide] = useState<FeedSlide>(31);
   const [activeClientSlide, setActiveClientSlide] = useState<ClientSlide>(3);
   const [isDownloading, setIsDownloading] = useState(false);
   const [preparedNempoPng, setPreparedNempoPng] = useState<{
@@ -2632,7 +2635,7 @@ function App() {
   const exportRef = useRef<HTMLElement | null>(null);
   const isNempoFeed = activeFeed === 'nempo';
   const isHighQualityNempoStorySlide =
-    isNempoFeed && activeSlide >= 20 && activeSlide <= 30;
+    isNempoFeed && activeSlide >= 20 && activeSlide <= 31;
   const isCoupon = activeFeed === 'coupon';
   const isQCard = activeFeed === 'qcard';
   const isPhotobooth = activeFeed === 'photobooth';
@@ -2766,7 +2769,7 @@ function App() {
           highQualityCanvas.height,
         );
         renderedCanvas = highQualityCanvas;
-      } else if (isNempoFeed && activeSlide === 30) {
+      } else if (isNempoFeed && (activeSlide === 30 || activeSlide === 31)) {
         const artworkWidth = artwork.getBoundingClientRect().width;
         const scale = (outputWidth / artworkWidth) * renderScale;
         renderedCanvas = await domToCanvas(artwork, {
@@ -2937,7 +2940,7 @@ function App() {
       ? isGgsStory
         ? [1, 2, 3]
         : [1, 2, 3, 4, 5, 6]
-      : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
+      : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const selectedSlide =
     isGgsFeed ? activeClientSlide : activeSlide;
 
@@ -3120,7 +3123,7 @@ function App() {
                   ? 'Menyiapkan PNG…'
                   : isCalendar
                     ? 'Download PNG · 50×70 cm'
-                    : isNempoFeed && activeSlide === 30
+                    : isNempoFeed && (activeSlide === 30 || activeSlide === 31)
                       ? 'Download PNG · 3×'
                     : isPhotobooth || isGgsFeed || isHighQualityNempoStorySlide
                       ? 'Download PNG · 3×'
