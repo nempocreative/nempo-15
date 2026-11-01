@@ -41,6 +41,7 @@ import { Route as WeddingInvitationTemaNavyEleganRouteImport } from './routes/we
 import { Route as WeddingInvitationTemaNavyEleganTanpaFotoRouteImport } from './routes/wedding-invitation.tema.navy-elegan-tanpa-foto'
 import { Route as WeddingInvitationTemaPeachKlasikTanpaFotoRouteImport } from './routes/wedding-invitation.tema.peach-klasik-tanpa-foto'
 import { Route as WeddingInvitationTemaRoseDustyRouteImport } from './routes/wedding-invitation.tema.rose-dusty'
+import { Route as WeddingInvitationTemaRoseDustyTanpaFotoRouteImport } from './routes/wedding-invitation.tema.rose-dusty-tanpa-foto'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -212,6 +213,12 @@ const WeddingInvitationTemaRoseDustyRoute =
     path: '/tema/rose-dusty',
     getParentRoute: () => WeddingInvitationRoute,
   } as any)
+const WeddingInvitationTemaRoseDustyTanpaFotoRoute =
+  WeddingInvitationTemaRoseDustyTanpaFotoRouteImport.update({
+    id: '/tema/rose-dusty-tanpa-foto',
+    path: '/tema/rose-dusty-tanpa-foto',
+    getParentRoute: () => WeddingInvitationRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -246,6 +253,7 @@ export interface FileRoutesByFullPath {
   '/wedding-invitation/tema/navy-elegan-tanpa-foto': typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
   '/wedding-invitation/tema/rose-dusty': typeof WeddingInvitationTemaRoseDustyRoute
+  '/wedding-invitation/tema/rose-dusty-tanpa-foto': typeof WeddingInvitationTemaRoseDustyTanpaFotoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -280,6 +288,7 @@ export interface FileRoutesByTo {
   '/wedding-invitation/tema/navy-elegan-tanpa-foto': typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
   '/wedding-invitation/tema/rose-dusty': typeof WeddingInvitationTemaRoseDustyRoute
+  '/wedding-invitation/tema/rose-dusty-tanpa-foto': typeof WeddingInvitationTemaRoseDustyTanpaFotoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -315,6 +324,7 @@ export interface FileRoutesById {
   '/wedding-invitation/tema/navy-elegan-tanpa-foto': typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   '/wedding-invitation/tema/peach-klasik-tanpa-foto': typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
   '/wedding-invitation/tema/rose-dusty': typeof WeddingInvitationTemaRoseDustyRoute
+  '/wedding-invitation/tema/rose-dusty-tanpa-foto': typeof WeddingInvitationTemaRoseDustyTanpaFotoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -351,6 +361,7 @@ export interface FileRouteTypes {
     | '/wedding-invitation/tema/navy-elegan-tanpa-foto'
     | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
     | '/wedding-invitation/tema/rose-dusty'
+    | '/wedding-invitation/tema/rose-dusty-tanpa-foto'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -385,6 +396,7 @@ export interface FileRouteTypes {
     | '/wedding-invitation/tema/navy-elegan-tanpa-foto'
     | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
     | '/wedding-invitation/tema/rose-dusty'
+    | '/wedding-invitation/tema/rose-dusty-tanpa-foto'
   id:
     | '__root__'
     | '/'
@@ -419,6 +431,7 @@ export interface FileRouteTypes {
     | '/wedding-invitation/tema/navy-elegan-tanpa-foto'
     | '/wedding-invitation/tema/peach-klasik-tanpa-foto'
     | '/wedding-invitation/tema/rose-dusty'
+    | '/wedding-invitation/tema/rose-dusty-tanpa-foto'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -672,6 +685,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WeddingInvitationTemaRoseDustyRouteImport
       parentRoute: typeof WeddingInvitationRoute
     }
+    '/wedding-invitation/tema/rose-dusty-tanpa-foto': {
+      id: '/wedding-invitation/tema/rose-dusty-tanpa-foto'
+      path: '/tema/rose-dusty-tanpa-foto'
+      fullPath: '/wedding-invitation/tema/rose-dusty-tanpa-foto'
+      preLoaderRoute: typeof WeddingInvitationTemaRoseDustyTanpaFotoRouteImport
+      parentRoute: typeof WeddingInvitationRoute
+    }
   }
 }
 
@@ -686,6 +706,7 @@ interface WeddingInvitationRouteChildren {
   WeddingInvitationTemaNavyEleganTanpaFotoRoute: typeof WeddingInvitationTemaNavyEleganTanpaFotoRoute
   WeddingInvitationTemaPeachKlasikTanpaFotoRoute: typeof WeddingInvitationTemaPeachKlasikTanpaFotoRoute
   WeddingInvitationTemaRoseDustyRoute: typeof WeddingInvitationTemaRoseDustyRoute
+  WeddingInvitationTemaRoseDustyTanpaFotoRoute: typeof WeddingInvitationTemaRoseDustyTanpaFotoRoute
 }
 
 const WeddingInvitationRouteChildren: WeddingInvitationRouteChildren = {
@@ -704,6 +725,8 @@ const WeddingInvitationRouteChildren: WeddingInvitationRouteChildren = {
   WeddingInvitationTemaPeachKlasikTanpaFotoRoute:
     WeddingInvitationTemaPeachKlasikTanpaFotoRoute,
   WeddingInvitationTemaRoseDustyRoute: WeddingInvitationTemaRoseDustyRoute,
+  WeddingInvitationTemaRoseDustyTanpaFotoRoute:
+    WeddingInvitationTemaRoseDustyTanpaFotoRoute,
 }
 
 const WeddingInvitationRouteWithChildren =
