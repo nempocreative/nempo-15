@@ -2582,6 +2582,7 @@ function FeedArtwork({
           </span>
         </div>
       </div>
+      )}
 
     </main>
   );
