@@ -50,4 +50,4 @@
 .nempo-fourteen .n14-story img{border-radius:160px 160px 0 0}
 .nempo-fourteen .n14-recipient{background:none;border:0;padding:0}
 @media(min-width:900px){.nempo-fourteen .n14-cover-title{max-width:32%}.nempo-fourteen .n14-cover-text{padding-top:140px}.nempo-fourteen .n14-cover h1{font-size:60px}}
-@media(max-width:899px){.nempo-fourteen .n14-cover-text{padding-top:78px}.nempo-fourteen .n14-cover h1{font-size:36px;margin:8px 0}.nempo-fourteen .n14-cover-title>.mt-5{margin-top:12px}.nempo-fourteen .n14-cover-title>p:last-child{font-size:14px}}
+@media(max-width:899px){.nempo-fourteen .n14-cover-text{padding-top:78px}.nempo-fourteen .n14-cover h1{font-size:36px;margin:8px 0}.nempo-fourteen .n14-cover-title>.mt-5{margin-top:12px}.nempo-fourteen .n14-cover-title>p:last-child{font-size:14px}.nempo-fourteen .n14-scene{top:80px;height:calc(100% - 80px)}}
