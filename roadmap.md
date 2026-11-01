@@ -1,4 +1,5 @@
 # Roadmap
+- [ ] Rapikan sampul pratinjau 16 tema agar sesuai desain undangan dan presisi di ponsel, tablet, serta komputer.
 - [x] NEMPO 16: Merah Marun Tanpa Foto dengan cartoon beranimasi, acara, cerita, RSVP, kado dan kalender pratinjau; animasi, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa, 76 tes lolos.
 - [x] NEMPO 15: Merah Marun Adat Foto, acara, cerita, galeri, RSVP, kado dan kalender pratinjau; galeri, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa, 75 tes lolos.
 - [x] NEMPO 14: Rose Dusty Tanpa Foto dengan cartoon beranimasi, cerita, acara, RSVP, kado dan kalender pratinjau; animasi, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa, 74 tes lolos.
