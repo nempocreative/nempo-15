@@ -2,6 +2,9 @@ import { describe, expect, it } from "vitest";
 import { invitationCategories, invitationThemes, filterInvitationThemes, findInvitationTheme } from "./invitation-themes";
 
 describe("invitation categories", () => {
+  it("keeps NEMPO 15 as Merah Marun with traditional wedding photos", () => {
+    expect(findInvitationTheme("merah-marun")).toMatchObject({code: "NEMPO 15", category: "adat-photo", withPhoto: true});
+  });
   it("keeps NEMPO 14 as the Rose Dusty no-photo traditional invitation", () => {
     expect(findInvitationTheme("rose-dusty-tanpa-foto")).toMatchObject({code: "NEMPO 14", category: "adat-no-photo", withPhoto: false});
   });

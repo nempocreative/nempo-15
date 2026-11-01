@@ -91,6 +91,35 @@
   --color-accent: var(--n14-soft);
   --color-accent-foreground: var(--n14-ink);
 }
+.nempo-one.nempo-fifteen {
+  --n15-gold: oklch(0.82 0.07 85);
+  --n15-sage: oklch(0.42 0.045 150);
+  --n15-ink: oklch(0.29 0.055 12);
+  --n15-paper: oklch(0.985 0.004 90);
+  --n15-rose: oklch(0.35 0.115 15);
+  --n15-line: oklch(0.83 0.023 15);
+  --n15-soft: oklch(0.95 0.018 10);
+  --n15-shade: linear-gradient(90deg,color-mix(in oklab,var(--n15-paper) 94%,transparent),color-mix(in oklab,var(--n15-paper) 12%,transparent) 70%);
+  --n15-shadow: 0 8px 30px color-mix(in oklab,var(--n15-ink) 15%,transparent);
+  --background: var(--n15-paper);
+  --foreground: var(--n15-ink);
+  --primary: var(--n15-rose);
+  --primary-foreground: var(--n15-paper);
+  --primary-border: var(--n15-rose);
+  --border: var(--n15-line);
+  --inv-soft: var(--n15-soft);
+  --color-background: var(--n15-paper);
+  --color-foreground: var(--n15-ink);
+  --color-primary: var(--n15-rose);
+  --color-primary-foreground: var(--n15-paper);
+  --color-border: var(--n15-line);
+  --color-input: var(--n15-line);
+  --color-ring: var(--n15-rose);
+  --color-muted: var(--n15-soft);
+  --color-muted-foreground: var(--n15-ink);
+  --color-accent: var(--n15-soft);
+  --color-accent-foreground: var(--n15-ink);
+}
 .nempo-one.nempo-thirteen {
   --n13-sage: oklch(0.42 0.045 150);
   --n13-ink: oklch(0.34 0.045 12);
