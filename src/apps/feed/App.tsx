@@ -2523,7 +2523,7 @@ function FeedArtwork({
         )}
       </div>
 
-      {slide !== 31 && (
+      {selectedSlide !== 31 && (
       <div
         className={`absolute z-20 flex items-center gap-2.5 ${
           slide >= 2
