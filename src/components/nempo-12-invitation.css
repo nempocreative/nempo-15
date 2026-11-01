@@ -36,7 +36,7 @@
 @media(min-width:900px){
   .nempo-twelve .n12-cover{height:92svh;min-height:680px;max-height:1100px}
   .nempo-twelve .n12-cover-text{align-items:flex-start;text-align:left;padding:100px 8% 80px}.nempo-twelve .n12-cover-title{max-width:40%}.nempo-twelve .n12-recipient{max-width:360px}
-  .nempo-twelve .n12-scene{object-fit:cover;object-position:center 58%}
+  .nempo-twelve .n12-scene{object-fit:cover;object-position:center top}
   .nempo-twelve .n12-cover h1{font-size:56px}
   .nempo-twelve .n12-couple-stage{width:min(360px,46%)}
 }
