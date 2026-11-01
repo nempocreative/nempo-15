@@ -91,6 +91,36 @@
   --color-accent: var(--n14-soft);
   --color-accent-foreground: var(--n14-ink);
 }
+.nempo-one.nempo-sixteen {
+  --n16-gold: oklch(0.82 0.07 85);
+  --n16-mobile-shade: linear-gradient(180deg, color-mix(in oklab, var(--n16-paper) 90%, transparent), color-mix(in oklab, var(--n16-paper) 80%, transparent) 27%, transparent 45%, transparent 72%, color-mix(in oklab, var(--n16-paper) 95%, transparent));
+  --n16-sage: oklch(0.42 0.045 150);
+  --n16-ink: oklch(0.29 0.055 12);
+  --n16-paper: oklch(0.985 0.004 90);
+  --n16-rose: oklch(0.35 0.115 15);
+  --n16-line: oklch(0.83 0.023 15);
+  --n16-soft: oklch(0.95 0.018 10);
+  --n16-shade: linear-gradient(90deg,color-mix(in oklab,var(--n16-paper) 94%,transparent),color-mix(in oklab,var(--n16-paper) 12%,transparent) 70%);
+  --n16-shadow: 0 8px 30px color-mix(in oklab,var(--n16-ink) 15%,transparent);
+  --background: var(--n16-paper);
+  --foreground: var(--n16-ink);
+  --primary: var(--n16-rose);
+  --primary-foreground: var(--n16-paper);
+  --primary-border: var(--n16-rose);
+  --border: var(--n16-line);
+  --inv-soft: var(--n16-soft);
+  --color-background: var(--n16-paper);
+  --color-foreground: var(--n16-ink);
+  --color-primary: var(--n16-rose);
+  --color-primary-foreground: var(--n16-paper);
+  --color-border: var(--n16-line);
+  --color-input: var(--n16-line);
+  --color-ring: var(--n16-rose);
+  --color-muted: var(--n16-soft);
+  --color-muted-foreground: var(--n16-ink);
+  --color-accent: var(--n16-soft);
+  --color-accent-foreground: var(--n16-ink);
+}
 .nempo-one.nempo-fifteen {
   --n15-gold: oklch(0.82 0.07 85);
   --n15-mobile-shade: linear-gradient(180deg, color-mix(in oklab, var(--n15-paper) 90%, transparent), color-mix(in oklab, var(--n15-paper) 80%, transparent) 27%, transparent 45%, transparent 72%, color-mix(in oklab, var(--n15-paper) 95%, transparent));

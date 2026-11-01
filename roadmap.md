@@ -1,4 +1,5 @@
 # Roadmap
+- [x] NEMPO 16: Merah Marun Tanpa Foto dengan cartoon beranimasi, acara, cerita, RSVP, kado dan kalender pratinjau; animasi, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa, 76 tes lolos.
 - [x] NEMPO 15: Merah Marun Adat Foto, acara, cerita, galeri, RSVP, kado dan kalender pratinjau; galeri, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa, 75 tes lolos.
 - [x] NEMPO 14: Rose Dusty Tanpa Foto dengan cartoon beranimasi, cerita, acara, RSVP, kado dan kalender pratinjau; animasi, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa, 74 tes lolos.
 - [x] NEMPO 13: Rose Dusty Adat Foto, acara, cerita, galeri, RSVP, kado dan kalender pratinjau; galeri, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa, 73 tes lolos.
