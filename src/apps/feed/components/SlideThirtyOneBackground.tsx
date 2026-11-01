@@ -1,15 +1,15 @@
-import mergedPoster from '@/assets/nempo-feed-slide-31-poster.jpg';
+import frameAsset from '@/assets/nempo-feed-slide-31-frame.png.asset.json';
 
 export function SlideThirtyOneBackground() {
   return (
     <section
       role="group"
-      aria-label="Poster MusiComedy Night"
-      className="absolute inset-0 z-[3] overflow-hidden"
+      aria-label="Bingkai MusiComedy Night"
+      className="absolute inset-0 z-[3] overflow-hidden bg-white"
     >
       <img
-        src={mergedPoster}
-        alt="Poster MusiComedy Night dengan foto grup berbusana adat Sunda dan ilustrasi alat musik tradisional"
+        src={frameAsset.url}
+        alt="Bingkai MusiComedy Night dengan ilustrasi alat musik tradisional, tanggal 4 November 2026, dan lokasi Good Story Cafe"
         className="absolute inset-0 h-full w-full object-cover"
         loading="eager"
         decoding="async"
