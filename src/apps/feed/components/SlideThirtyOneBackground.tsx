@@ -1,4 +1,4 @@
-import mergedPoster from '@/assets/nempo-feed-slide-31-merged.jpg';
+import mergedPoster from '@/assets/nempo-feed-slide-31-poster.jpg';
 
 export function SlideThirtyOneBackground() {
   return (
