@@ -1,4 +1,5 @@
 # Roadmap
+- [ ] NEMPO 13: Rose Dusty Adat Foto, acara, cerita, galeri, RSVP, kado dan kalender pratinjau.
 - [x] NEMPO 12: Biru Taman Tanpa Foto dengan cartoon pengantin beranimasi, acara, cerita, RSVP, kado dan kalender pratinjau; animasi, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa.
 - [x] NEMPO 11: Biru Taman Foto, acara, cerita, galeri, RSVP, kado dan kalender pratinjau; galeri, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa.
 - [x] NEMPO 10: Hitam Mewah Tanpa Foto dengan cartoon pengantin beranimasi, acara, cerita, RSVP, kado dan kalender pratinjau; animasi, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa.
