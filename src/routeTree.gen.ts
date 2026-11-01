@@ -35,6 +35,7 @@ import { Route as WeddingInvitationTemaBiruTamanRouteImport } from './routes/wed
 import { Route as WeddingInvitationTemaBiruTamanTanpaFotoRouteImport } from './routes/wedding-invitation.tema.biru-taman-tanpa-foto'
 import { Route as WeddingInvitationTemaHitamMewahRouteImport } from './routes/wedding-invitation.tema.hitam-mewah'
 import { Route as WeddingInvitationTemaHitamMewahTanpaFotoRouteImport } from './routes/wedding-invitation.tema.hitam-mewah-tanpa-foto'
+import { Route as WeddingInvitationTemaMerahMarunRouteImport } from './routes/wedding-invitation.tema.merah-marun'
 import { Route as WeddingInvitationTemaMoccaHangatRouteImport } from './routes/wedding-invitation.tema.mocca-hangat'
 import { Route as WeddingInvitationTemaMoccaHangatTanpaFotoRouteImport } from './routes/wedding-invitation.tema.mocca-hangat-tanpa-foto'
 import { Route as WeddingInvitationTemaNavyEleganRouteImport } from './routes/wedding-invitation.tema.navy-elegan'
@@ -177,6 +178,12 @@ const WeddingInvitationTemaHitamMewahTanpaFotoRoute =
     path: '/tema/hitam-mewah-tanpa-foto',
     getParentRoute: () => WeddingInvitationRoute,
   } as any)
+const WeddingInvitationTemaMerahMarunRoute =
+  WeddingInvitationTemaMerahMarunRouteImport.update({
+    id: '/tema/merah-marun',
+    path: '/tema/merah-marun',
+    getParentRoute: () => WeddingInvitationRoute,
+  } as any)
 const WeddingInvitationTemaMoccaHangatRoute =
   WeddingInvitationTemaMoccaHangatRouteImport.update({
     id: '/tema/mocca-hangat',
@@ -247,6 +254,7 @@ export interface FileRoutesByFullPath {
   '/wedding-invitation/tema/biru-taman-tanpa-foto': typeof WeddingInvitationTemaBiruTamanTanpaFotoRoute
   '/wedding-invitation/tema/hitam-mewah': typeof WeddingInvitationTemaHitamMewahRoute
   '/wedding-invitation/tema/hitam-mewah-tanpa-foto': typeof WeddingInvitationTemaHitamMewahTanpaFotoRoute
+  '/wedding-invitation/tema/merah-marun': typeof WeddingInvitationTemaMerahMarunRoute
   '/wedding-invitation/tema/mocca-hangat': typeof WeddingInvitationTemaMoccaHangatRoute
   '/wedding-invitation/tema/mocca-hangat-tanpa-foto': typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
@@ -282,6 +290,7 @@ export interface FileRoutesByTo {
   '/wedding-invitation/tema/biru-taman-tanpa-foto': typeof WeddingInvitationTemaBiruTamanTanpaFotoRoute
   '/wedding-invitation/tema/hitam-mewah': typeof WeddingInvitationTemaHitamMewahRoute
   '/wedding-invitation/tema/hitam-mewah-tanpa-foto': typeof WeddingInvitationTemaHitamMewahTanpaFotoRoute
+  '/wedding-invitation/tema/merah-marun': typeof WeddingInvitationTemaMerahMarunRoute
   '/wedding-invitation/tema/mocca-hangat': typeof WeddingInvitationTemaMoccaHangatRoute
   '/wedding-invitation/tema/mocca-hangat-tanpa-foto': typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
@@ -318,6 +327,7 @@ export interface FileRoutesById {
   '/wedding-invitation/tema/biru-taman-tanpa-foto': typeof WeddingInvitationTemaBiruTamanTanpaFotoRoute
   '/wedding-invitation/tema/hitam-mewah': typeof WeddingInvitationTemaHitamMewahRoute
   '/wedding-invitation/tema/hitam-mewah-tanpa-foto': typeof WeddingInvitationTemaHitamMewahTanpaFotoRoute
+  '/wedding-invitation/tema/merah-marun': typeof WeddingInvitationTemaMerahMarunRoute
   '/wedding-invitation/tema/mocca-hangat': typeof WeddingInvitationTemaMoccaHangatRoute
   '/wedding-invitation/tema/mocca-hangat-tanpa-foto': typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   '/wedding-invitation/tema/navy-elegan': typeof WeddingInvitationTemaNavyEleganRoute
@@ -355,6 +365,7 @@ export interface FileRouteTypes {
     | '/wedding-invitation/tema/biru-taman-tanpa-foto'
     | '/wedding-invitation/tema/hitam-mewah'
     | '/wedding-invitation/tema/hitam-mewah-tanpa-foto'
+    | '/wedding-invitation/tema/merah-marun'
     | '/wedding-invitation/tema/mocca-hangat'
     | '/wedding-invitation/tema/mocca-hangat-tanpa-foto'
     | '/wedding-invitation/tema/navy-elegan'
@@ -390,6 +401,7 @@ export interface FileRouteTypes {
     | '/wedding-invitation/tema/biru-taman-tanpa-foto'
     | '/wedding-invitation/tema/hitam-mewah'
     | '/wedding-invitation/tema/hitam-mewah-tanpa-foto'
+    | '/wedding-invitation/tema/merah-marun'
     | '/wedding-invitation/tema/mocca-hangat'
     | '/wedding-invitation/tema/mocca-hangat-tanpa-foto'
     | '/wedding-invitation/tema/navy-elegan'
@@ -425,6 +437,7 @@ export interface FileRouteTypes {
     | '/wedding-invitation/tema/biru-taman-tanpa-foto'
     | '/wedding-invitation/tema/hitam-mewah'
     | '/wedding-invitation/tema/hitam-mewah-tanpa-foto'
+    | '/wedding-invitation/tema/merah-marun'
     | '/wedding-invitation/tema/mocca-hangat'
     | '/wedding-invitation/tema/mocca-hangat-tanpa-foto'
     | '/wedding-invitation/tema/navy-elegan'
@@ -643,6 +656,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WeddingInvitationTemaHitamMewahTanpaFotoRouteImport
       parentRoute: typeof WeddingInvitationRoute
     }
+    '/wedding-invitation/tema/merah-marun': {
+      id: '/wedding-invitation/tema/merah-marun'
+      path: '/tema/merah-marun'
+      fullPath: '/wedding-invitation/tema/merah-marun'
+      preLoaderRoute: typeof WeddingInvitationTemaMerahMarunRouteImport
+      parentRoute: typeof WeddingInvitationRoute
+    }
     '/wedding-invitation/tema/mocca-hangat': {
       id: '/wedding-invitation/tema/mocca-hangat'
       path: '/tema/mocca-hangat'
@@ -700,6 +720,7 @@ interface WeddingInvitationRouteChildren {
   WeddingInvitationTemaBiruTamanTanpaFotoRoute: typeof WeddingInvitationTemaBiruTamanTanpaFotoRoute
   WeddingInvitationTemaHitamMewahRoute: typeof WeddingInvitationTemaHitamMewahRoute
   WeddingInvitationTemaHitamMewahTanpaFotoRoute: typeof WeddingInvitationTemaHitamMewahTanpaFotoRoute
+  WeddingInvitationTemaMerahMarunRoute: typeof WeddingInvitationTemaMerahMarunRoute
   WeddingInvitationTemaMoccaHangatRoute: typeof WeddingInvitationTemaMoccaHangatRoute
   WeddingInvitationTemaMoccaHangatTanpaFotoRoute: typeof WeddingInvitationTemaMoccaHangatTanpaFotoRoute
   WeddingInvitationTemaNavyEleganRoute: typeof WeddingInvitationTemaNavyEleganRoute
@@ -716,6 +737,7 @@ const WeddingInvitationRouteChildren: WeddingInvitationRouteChildren = {
   WeddingInvitationTemaHitamMewahRoute: WeddingInvitationTemaHitamMewahRoute,
   WeddingInvitationTemaHitamMewahTanpaFotoRoute:
     WeddingInvitationTemaHitamMewahTanpaFotoRoute,
+  WeddingInvitationTemaMerahMarunRoute: WeddingInvitationTemaMerahMarunRoute,
   WeddingInvitationTemaMoccaHangatRoute: WeddingInvitationTemaMoccaHangatRoute,
   WeddingInvitationTemaMoccaHangatTanpaFotoRoute:
     WeddingInvitationTemaMoccaHangatTanpaFotoRoute,
