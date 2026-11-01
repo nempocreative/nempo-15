@@ -2106,6 +2106,8 @@ function FeedArtwork({
                       ? 'LEGENDA SUNDA'
                       : slide === 30
                         ? 'SUMPAH PEMUDA'
+                      : selectedSlide === 31
+                        ? 'MUSICOMEDY NIGHT'
                     : slide === 16 || slide === 17
                     ? 'POSTER PRODUK'
                   : slide === 15
@@ -2521,6 +2523,7 @@ function FeedArtwork({
         )}
       </div>
 
+      {slide !== 31 && (
       <div
         className={`absolute z-20 flex items-center gap-2.5 ${
           slide >= 2
