@@ -12,22 +12,7 @@ import {
   INVITATION_PRICE, invitationRupiah, woPackagesWithFreeInvitation,
 } from "@/data/wedding-invitation";
 import { invitationCategories, filterInvitationThemes, type InvitationCategoryKey } from "@/data/invitation-themes";
-import nempo01Photo from "@/assets/nempo-01-ai-couple.jpg";
-import nempo02Illustration from "@/assets/nempo-02-card-illustration.png";
-import nempo03Cover from "@/assets/nempo-03-wedding-cover.jpg";
-import nempo04CoupleScene from "@/assets/nempo-04-couple-scene.jpg";
-import nempo05Cover from "@/assets/nempo-05-wedding-cover.jpg";
-import nempo06Scene from "@/assets/nempo-06-couple-scene.jpg";
-import nempo07Cover from "@/assets/nempo-07-wedding-cover.jpg";
-import nempo08Scene from "@/assets/nempo-08-couple-scene.jpg";
-import nempo09Cover from "@/assets/nempo-09-wedding-cover.jpg";
-import nempo10Scene from "@/assets/nempo-10-couple-scene.jpg";
-import nempo11Cover from "@/assets/nempo-11-wedding-cover.jpg";
-import nempo16Scene from "@/assets/nempo-16-couple-scene.jpg";
-import nempo15Cover from "@/assets/nempo-15-wedding-cover.jpg";
-import nempo14Scene from "@/assets/nempo-14-couple-scene.jpg";
-import nempo13Cover from "@/assets/nempo-13-wedding-cover.jpg";
-import nempo12Scene from "@/assets/nempo-12-couple-scene.jpg";
+import { InvitationCoverPreview } from "@/components/invitation-cover-preview";
 
 const serif = "font-[family-name:var(--font-wed-serif)]";
 const hand = "font-[family-name:var(--font-wed-hand)]";
@@ -222,23 +207,15 @@ export default function WeddingInvitationPage() {
               <span className="text-xs text-muted-foreground">{visibleThemes.length} tema</span>
               <Button variant="ghost" size="sm" onClick={() => setCategory("all")} aria-pressed={category === "all"} className="text-primary">Semua Tema</Button>
             </div>
-            <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+            <div className="grid grid-cols-2 items-stretch gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
               {visibleThemes.map((t) => (
-                <Link key={t.slug} href={`/wedding-invitation/tema/${t.slug}`} className="wed-card-pop group overflow-hidden rounded-3xl bg-card shadow-md transition hover:-translate-y-1 hover:shadow-xl">
-                  <div className="relative flex aspect-square items-center justify-center pt-6" style={{ background: t.colors.bg }}>
-                    <span className="absolute top-3 text-[10px] font-bold tracking-widest" style={{ color: t.colors.ink }}>{t.code}</span>
-                    <div className="flex h-[66%] w-[45%] flex-col items-center justify-center rounded-2xl border-4 p-2 text-center shadow-xl transition group-hover:rotate-2" style={{ background: t.colors.surface, borderColor: t.colors.ink, color: t.colors.ink }}>
-                      <span className="text-[8px] uppercase tracking-widest">The Wedding of</span>
-                      {t.withPhoto ? <img src={t.code === "NEMPO 01" ? nempo01Photo : t.code === "NEMPO 03" ? nempo03Cover : t.code === "NEMPO 05" ? nempo05Cover : t.code === "NEMPO 07" ? nempo07Cover : t.code === "NEMPO 09" ? nempo09Cover : t.code === "NEMPO 15" ? nempo15Cover : t.code === "NEMPO 13" ? nempo13Cover : t.code === "NEMPO 11" ? nempo11Cover : "/images/invitation-hero.jpg"} alt="" loading="lazy" className="my-1 h-10 w-8 rounded-t-full object-cover object-top sm:h-14 sm:w-10" /> : ["NEMPO 02", "NEMPO 04", "NEMPO 06", "NEMPO 08", "NEMPO 10", "NEMPO 12", "NEMPO 14", "NEMPO 16"].includes(t.code) ? <img src={t.code === "NEMPO 16" ? nempo16Scene : t.code === "NEMPO 14" ? nempo14Scene : t.code === "NEMPO 12" ? nempo12Scene : t.code === "NEMPO 10" ? nempo10Scene : t.code === "NEMPO 08" ? nempo08Scene : t.code === "NEMPO 06" ? nempo06Scene : t.code === "NEMPO 04" ? nempo04CoupleScene : nempo02Illustration} alt="" loading="lazy" className="my-1 h-10 w-10 rounded-t-full object-cover object-top sm:h-14 sm:w-14" /> : <Heart aria-hidden className="my-2 h-6 w-6" />}
-                      <span className={`${hand} text-lg leading-tight`} style={{ color: t.colors.accent }}>Habib &amp; Adiba</span>
-                      <span className="mt-1 rounded-full px-2 py-0.5 text-[7px]" style={{ background: t.colors.accent, color: t.colors.surface }}>Buka Undangan</span>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <p className="font-bold text-primary">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">{t.mood}</p>
-                    <p className="mt-1 text-[10px] font-semibold text-muted-foreground">{invitationCategories.find((item) => item.key === t.category)?.name}</p>
-                    <span className="mt-3 inline-flex items-center gap-1 rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground">Lihat Contoh <ArrowRight className="h-3 w-3" /></span>
+                <Link key={t.slug} href={`/wedding-invitation/tema/${t.slug}`} aria-label={`Lihat undangan ${t.code} ${t.name}`} className="group flex min-w-0 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-shadow hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring">
+                  <InvitationCoverPreview theme={t} />
+                  <div className="flex flex-1 flex-col p-3 sm:p-4">
+                    <p className="text-sm font-bold leading-snug text-primary">{t.name}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{t.mood}</p>
+                    <p className="mb-3 mt-2 text-[10px] font-semibold leading-relaxed text-muted-foreground">{invitationCategories.find((item) => item.key === t.category)?.name}</p>
+                    <span className="mt-auto inline-flex items-center justify-between gap-2 border-t border-border pt-3 text-xs font-semibold text-primary">Lihat Contoh <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1 motion-reduce:transform-none" /></span>
                   </div>
                 </Link>
               ))}

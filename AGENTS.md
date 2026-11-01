@@ -10,6 +10,7 @@
 <!-- LOVABLE:END -->
 
 ## Architecture rules
+- Invitation catalog covers use stored portrait captures of each actual closed invitation, mapped by stable theme code; why: thumbnails must match the real design and keep identical proportions across screen sizes. Refresh the capture when a cover design changes.
 - Bespoke invitation designs are separate components selected by stable theme code in the invitation demo; why: refining one theme must not alter the others.
 - Bespoke invitation demos use explicit leaf routes mounting NempoShell, with palettes scoped in the global stylesheet; why: each design has its own metadata and does not leak its theme into other pages.
 - NEMPO 01's sample guestbook is session-only frontend state and explicitly labeled as a preview; why: example submissions must not pretend to reach a real couple or persist publicly.
