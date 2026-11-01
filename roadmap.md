@@ -1,4 +1,5 @@
 # Roadmap
+- [x] NEMPO 11: Biru Taman Foto, acara, cerita, galeri, RSVP, kado dan kalender pratinjau; galeri, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa.
 - [x] NEMPO 10: Hitam Mewah Tanpa Foto dengan cartoon pengantin beranimasi, acara, cerita, RSVP, kado dan kalender pratinjau; animasi, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa.
 - [x] NEMPO 09: Hitam Mewah Foto, acara, cerita, galeri, RSVP, kado dan kalender pratinjau; kalender, galeri, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa.
 - [x] NEMPO 08: Mocca Hangat Tanpa Foto dengan cartoon beranimasi, acara, cerita, RSVP, kado dan kalender pratinjau; animasi, kalender, ucapan dan kartu tema diperiksa.
